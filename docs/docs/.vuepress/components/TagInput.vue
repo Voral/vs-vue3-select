@@ -59,6 +59,7 @@ const createTag = value => {
 
 .custom-result {
   margin-bottom: 24px;
+  opacity: 0.5;
 }
 
 .custom-option__label {
