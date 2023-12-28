@@ -1,4 +1,13 @@
 ---
+title: Limiting Selections
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Limiting Selections} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Limiting Selections} ]
+  - [ meta, { name: description , content: How to limit the choice of options of Vs Vue3 Select component } ]
+  - [ meta, { name: og:description , content: How to limit the choice of options of Vs Vue3 Select component } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/use-cases/selectable/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/use-cases/selectable/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
 sidebarDepth: 0
 prev:
  text: Validation

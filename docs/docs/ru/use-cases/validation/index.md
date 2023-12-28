@@ -1,4 +1,13 @@
 ---
+title: Проверки
+head:
+  - [meta, { name: title , content: Vs Vue3 Select Проверки }]
+  - [meta, { name: og:title , content: Vs Vue3 Select Проверки }]
+  - [meta, { name: description , content: Проверка значений компонента Vs Vue3 Select }]
+  - [meta, { name: og:description , content: Проверка значений компонента Vs Vue3 Select }]
+  - [meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/use-cases/validation/ }]
+  - [link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/use-cases/validation/ }]
+  - [meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,validation"} ]
 sidebarDepth: 0
 prev:
   text: Localization

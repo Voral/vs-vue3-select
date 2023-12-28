@@ -1,5 +1,13 @@
 ---
-title: События клавиатуры 
+title: События клавиатуры
+head:
+  - [ meta, { name: title , content: События клавиатуры компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: События клавиатуры компонента Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Настройка обработки событий клавиатуры в компоненте Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Настройка обработки событий клавиатуры в компоненте Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/customizing/keydown/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/customizing/keydown/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,keydown"} ]
 sidebarDepth: 0
 prev:
   text: Поле ввода тегов

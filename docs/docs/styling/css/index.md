@@ -1,4 +1,13 @@
 ---
+title: CSS Styling
+head:
+ - [ meta, { name: title , content: Vs Vue3 Select CSS Styling} ]
+ - [ meta, { name: og:title , content: Vs Vue3 Select CSS Styling} ]
+ - [ meta, { name: description , content: How to style a Vs Vue3 Select component using CSS} ]
+ - [ meta, { name: og:description , content: How to style a Vs Vue3 Select component using CSS} ]
+ - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/styling/css/ } ]
+ - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/styling/css/ } ]
+ - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,styling"} ]
 sidebarDepth: 0
 prev:
  text: Child Components
@@ -11,8 +20,8 @@ next:
 # CSS Styling
 
 Vs Vue3 Select offers many APIs for customizing the look and feel from the
-component. You can use [scoped slots](../../api/slots),
-[custom child components](../../styling/components), or modify the built in CSS properties.
+component. You can use [scoped slots](../../api/slots/),
+[custom child components](../../styling/components/), or modify the built-in CSS properties.
 
 ## CSS Variables
 

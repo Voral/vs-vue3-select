@@ -1,11 +1,23 @@
 ---
+title: WAI-ARIA Spec
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select component and WAI-ARIA Spec } ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select component and WAI-ARIA Spec } ]
+  - [ meta, { name: description , content: Component following the WAI-ARIA specifications and best practices for creating accessible
+    components } ]
+  - [ meta, { name: og:description , content: Component following the WAI-ARIA specifications and best practices for creating accessible
+    components } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/accessibility/wai-aria/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/accessibility/wai-aria/ } ]
+  - [ meta, { name: keywords , content: "select, select input,multiselect,wai-aria,accessibility" } ]
+
 sidebarDepth: 0
 prev:
- text: Slots Styling
- link: /styling/slots
+  text: Slots Styling
+  link: /styling/slots
 next:
- text: Localization
- link: /accessibility/localization
+  text: Localization
+  link: /accessibility/localization
 ---
 
 # WAI-ARIA Spec

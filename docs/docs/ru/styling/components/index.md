@@ -1,4 +1,13 @@
 ---
+title: Дочерние компоненты
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Дочерние компоненты} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Дочерние компоненты} ]
+  - [ meta, { name: description , content: Как стилизовать компонент Vs Vue3 при помощи дочерних компонентов} ]
+  - [ meta, { name: og:description , content: Как стилизовать компонент Vs Vue3 при помощи дочерних компонентов} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/styling/components/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/styling/components/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,styling"} ]
 sidebarDepth: 0
 prev:
  text: Работа со значением

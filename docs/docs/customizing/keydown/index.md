@@ -1,5 +1,13 @@
 ---
 title: Keydown Events
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Keydown Events } ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Keydown Events } ]
+  - [ meta, { name: description , content: Keydown processing capabilities in the Vs Vue3 Select component} ]
+  - [ meta, { name: og:description , content: Keydown processing capabilities in the Vs Vue3 Select component} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/customizing/keydown/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/customizing/keydown/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,keydown"} ]
 sidebarDepth: 0
 prev:
   text: Tag Input Field

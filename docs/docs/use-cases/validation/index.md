@@ -1,4 +1,14 @@
 ---
+title: Validation
+head:
+  - [meta, { name: title , content: Vs Vue3 Select Validation }]
+  - [meta, { name: og:title , content: Vs Vue3 Select Validation }]
+  - [meta, { name: description , content: Validate Vs Vue3 Select component value }]
+  - [meta, { name: og:description , content: Validate Vs Vue3 Select component value }]
+  - [meta, { name: og:url , content: https://vue3-select.va-soft.ru/use-cases/validation/ }]
+  - [link, { rel: canonical , href: https://vue3-select.va-soft.ru/use-cases/validation/ }]
+  - [meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,validation"} ]
+  
 sidebarDepth: 0
 prev:
  text: Localization

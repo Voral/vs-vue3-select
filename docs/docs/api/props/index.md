@@ -1,5 +1,13 @@
 ---
-description: Vs Vue3 Select Component properties description 
+title: Props
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select component Props } ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select component Props } ]
+  - [ meta, { name: description , content: Documentation for all Vs Vue3 Select component props } ]
+  - [ meta, { name: og:description , content: Documentation for all Vs Vue3 Select component props } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/api/props/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/api/props/ } ]
+  - [ meta, { name: keywords , content: "select, select input,multiselect,props,properties,component props,vue,vue3,vue3 component, vue3 select" } ]
 prev:
   text: Option Filtering
   link: /api/filtering
@@ -28,7 +36,7 @@ ariaLabel: {
 Append the dropdown element to the end of the body and size/position it
 dynamically. Use it if you have overflow or z-index issues.
 
-See [Dropdown Position](../../customizing/positioning) for more details.
+See [Dropdown Position](../../customizing/positioning/) for more details.
 
 ```js
 appendToBody: {
@@ -83,7 +91,7 @@ If a function is returned from `calculatePosition`, it will be called when the
 dropdown list is removed from the DOM. This allows for any garbage collection
 you may need to do.
 
-See [Dropdown Position](../../customizing/positioning) for more details.
+See [Dropdown Position](../../customizing/positioning/) for more details.
 
 ```js
 calculatePosition: {
@@ -170,7 +178,7 @@ to change the clear button or select chevron with your own markup.
 The object provided to the components prop will be merged with Vs Vue3 Select's
 default components.
 
-See [Components guide](../../styling/components) for more details.
+See [Components guide](../../styling/components/) for more details.
 
 ```js
 import Deselect from './Deselect';

@@ -1,4 +1,13 @@
 ---
+title: Infinite Scroll
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Infinite Scroll} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Infinite Scroll} ]
+  - [ meta, { name: description , content: How to implement infinite dropdown list scrolling Vs Vue3 Select component} ]
+  - [ meta, { name: og:description , content: How to implement infinite dropdown list scrolling Vs Vue3 Select component} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/use-cases/infinite-scroll/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/use-cases/infinite-scroll/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,infinite scroll"} ]
 sidebarDepth: 0
 prev:
  text: Pagination

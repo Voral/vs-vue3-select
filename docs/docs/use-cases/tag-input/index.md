@@ -1,7 +1,13 @@
 ---
 title: Tag Input Field
-description: How to Create a Tag Input Field
-keyword: select,tagged,tag input,input for tags
+head:
+  - [meta, { name: title , content: Vs Vue3 Select Tag Input Field }]
+  - [meta, { name: og:title , content: Vs Vue3 Select Tag Input Field }]
+  - [meta, { name: description , content: How to Create a Tag Input Field in Vue3 app }]
+  - [meta, { name: og:description , content: How to Create a Tag Input Field in Vue3 app }]
+  - [meta, { name: og:url , content: https://vue3-select.va-soft.ru/use-cases/tag-input/ }]
+  - [link, { rel: canonical , href: https://vue3-select.va-soft.ru/use-cases/tag-input/ }]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,tagged,tag input,input for tags"} ]
 sidebarDepth: 0
 prev:
   text: Floating Label

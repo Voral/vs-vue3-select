@@ -1,4 +1,14 @@
 ---
+title: Менеджер состояний
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select и менеджер состояния} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select и менеджер состояния} ]
+  - [ meta, { name: description , content: Взаимодействие компонента Vs Vue3 Select с менеджерами состояний} ]
+  - [ meta, { name: og:description , content: Взаимодействие компонента Vs Vue3 Select с менеджерами состояний} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/use-cases/state-manager/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/use-cases/state-manager/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,state manager,pinia,vuex"} ]
+
 sidebarDepth: 0
 prev:
   text: Бесконечная прокрутка

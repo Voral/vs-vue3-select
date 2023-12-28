@@ -1,3 +1,15 @@
+---
+title: Компонент Vs Vue3 Select
+head:
+  - [ meta, { name: title , content: Компонент Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: Компонент Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Документация компонента Vs Vue3 Select Component} ]
+  - [ meta, { name: og:description , content: Документация компонента Vs Vue3 Select Component} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
+---
+
 # Компонент Vs Vue3 Select
 
 ![Current Release](https://img.shields.io/github/release/voral/vs-vue3-select.svg)

@@ -1,4 +1,13 @@
 ---
+title: Option Filtering
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Option Filtering } ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Option Filtering } ]
+  - [ meta, { name: description , content: About option filtering in Vs Vue3 Select component} ]
+  - [ meta, { name: og:description , content: About option filtering in Vs Vue3 Select component} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/customizing/filtering/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/customizing/filtering/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,option filter,select option filtering"} ]
 sidebarDepth: 0
 prev:
   text: Dropdown Opening

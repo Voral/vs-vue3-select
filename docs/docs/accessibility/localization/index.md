@@ -1,11 +1,20 @@
 ---
+title: Localization
+head:
+  - [ meta, { name: title , content: Localization Vs Vue3 Select component} ]
+  - [ meta, { name: og:title , content: Localization Vs Vue3 Select component} ]
+  - [ meta, { name: description , content: How to localize vue3 select component } ]
+  - [ meta, { name: og:description , content: How to localize vue3 select component } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/accessibility/localization/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/accessibility/localization/ } ]
+  - [ meta, { name: keywords , content: "select localize,localize select input,localize multiselect" } ]
 sidebarDepth: 0
 prev:
- text: WAI-ARIA Spec
- link: /accessibility/wai-aria
+  text: WAI-ARIA Spec
+  link: /accessibility/wai-aria
 next:
- text: Validation
- link: /use-cases/validation
+  text: Validation
+  link: /use-cases/validation
 ---
 
 # Localization
@@ -69,4 +78,4 @@ and can be replaced in your app.
 :::
 ::::
 
-For a full list of component slots, view the [slots API docs](../../api/slots).
+For a full list of component slots, view the [slots API docs](../../api/slots/).

@@ -1,4 +1,13 @@
 ---
+title: Работа со значением
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Работа со значением} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Работа со значением} ]
+  - [ meta, { name: description , content: Взаимодействие с результирующим значением поля ввода Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Взаимодействие с результирующим значением поля ввода Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/start/values/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/start/values/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
 sidebarDepth: 0
 prev:
   text: Выпадающий список

@@ -1,4 +1,13 @@
 ---
+title: CSS стилизация
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select CSS стилизация} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select CSS стилизация} ]
+  - [ meta, { name: description , content: Как стилизовать компонент Vs Vue3 Select при помощи стилей CSS} ]
+  - [ meta, { name: og:description , content: Как стилизовать компонент Vs Vue3 Select при помощи стилей CSS} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/styling/css/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/styling/css/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,styling"} ]
 sidebarDepth: 0
 prev:
  text: Дочерние компоненты
@@ -11,7 +20,7 @@ next:
 # CSS стилизация
 
 Vs Vue3 Select предлагает различные способы для настройки внешнего вида компонента. Вы можете использовать 
-[слоты](../../../ru/api/slots), пользовательские [дочерние компоненты](../components) или изменять встроенные свойства CSS.
+[слоты](../../../ru/api/slots/), пользовательские [дочерние компоненты](../components/) или изменять встроенные свойства CSS.
 
 
 ## Переменные CSS

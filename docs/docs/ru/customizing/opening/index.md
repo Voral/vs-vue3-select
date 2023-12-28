@@ -1,4 +1,13 @@
 ---
+title: Открытие списка
+head:
+  - [ meta, { name: title , content: Открытие списка в Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: Открытие списка в Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Управление поведением раскрытия выпадающего списка компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Управление поведением раскрытия выпадающего списка компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/customizing/opening/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/customizing/opening/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
 sidebarDepth: 0
 prev:
   text: Позиционирование списка 

@@ -1,4 +1,13 @@
 ---
+title: Бесконечная прокрутка
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Бесконечная прокрутка } ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Бесконечная прокрутка } ]
+  - [ meta, { name: description , content: Как реализовать бесконечную прокрутку выпадающего списка компонента Vs Vue3 Select } ]
+  - [ meta, { name: og:description , content: Как реализовать бесконечную прокрутку выпадающего списка компонента Vs Vue3 Select } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/use-cases/infinite-scroll/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/use-cases/infinite-scroll/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,infinite scroll,бесконечная прокрутка" } ]
 sidebarDepth: 0
 prev:
   text: Разбивка на страницы

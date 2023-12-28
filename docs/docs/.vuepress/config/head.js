@@ -31,18 +31,9 @@ const head = [
     ['link', {rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c'}],
     ['meta', {name: 'msapplication-TileImage', content: '/icons/mstile-150x150.png',}],
     ['meta', {name: 'msapplication-TileColor', content: '#000000'}],
-    ['meta', {name: 'title', content: meta.title}],
-    ['meta', {name: 'description', content: meta.description}],
     ['link', {rel: 'icon', href: meta.icon, type: 'image/png'}],
     ['meta', {property: 'og:image', content: meta.icon}],
-    ['meta', {property: 'twitter:image', content: meta.icon}],
-    ['meta', {name: 'description', content: meta.description}],
-    ['meta', {property: 'og:description', content: meta.description}],
-    ['meta', {property: 'twitter:description', content: meta.description}],
-    ['meta', {property: 'twitter:title', content: meta.title}],
-    ['meta', {property: 'og:title', content: meta.title}],
     ['meta', {property: 'og:site_name', content: meta.title}],
-    ['meta', {property: 'og:url', content: meta.url}],
     ['meta', {property: 'og:type', content: 'website'}],
 ]
 

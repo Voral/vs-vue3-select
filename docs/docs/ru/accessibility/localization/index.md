@@ -1,4 +1,13 @@
 ---
+title: Локализация
+head:
+  - [ meta, { name: title , content: Локализация компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: Локализация компонента Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Варианты локализации компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Варианты локализации компонента Vs Vue3 Select } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/accessibility/localization/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/accessibility/localization/ } ]
+  - [ meta, { name: keywords , content: "select localize,localize select input,localize multiselect,локализация,select на русском" } ]
 sidebarDepth: 0
 prev:
  text: Спецификация WAI-ARIA
@@ -68,4 +77,4 @@ Vs Vue3 Select поддерживает RTL используя атрибут `d
 :::
 ::::
 
-Полный список слотов можно посмотреть на странице [API - Слоты](../../../ru/api/slots).
+Полный список слотов можно посмотреть на странице [API - Слоты](../../../ru/api/slots/).

@@ -1,4 +1,13 @@
 ---
+title: Установка
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Установка} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Установка} ]
+  - [ meta, { name: description , content: Инструкция по установке компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Инструкция по установке компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/start/install/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/start/install/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,installation,установка компонента"} ]
 sidebarDepth: 0
 prev:
  text: Компонент Vs Vue3 Select 

@@ -1,4 +1,13 @@
 ---
+title: Ограничение выбора
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Ограничение выбора} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Ограничение выбора} ]
+  - [ meta, { name: description , content: Как можно ограничивать выбор опций выпадающего списка в компоненте Vs Vue3 Select } ]
+  - [ meta, { name: og:description , content: Как можно ограничивать выбор опций выпадающего списка в компоненте Vs Vue3 Select } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/use-cases/selectable/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/use-cases/selectable/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
 sidebarDepth: 0
 prev:
  text: Проверки

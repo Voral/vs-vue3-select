@@ -1,5 +1,13 @@
 ---
 title: Поле ввода тегов
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Поле ввода тегов} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Поле ввода тегов} ]
+  - [ meta, { name: description , content: Пример создания поля ввода тегов на основе компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Пример создания поля ввода тегов на основе компонента Vs Vue3 Select} ]
+  - [meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/use-cases/tag-input/ }]
+  - [link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/use-cases/tag-input/ }]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,tagged,tag input,input for tags"} ]
 description: Пример создания поля для ввода тегов
 keyword: select,tagged,tag input,input for tags
 sidebarDepth: 0

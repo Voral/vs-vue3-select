@@ -1,4 +1,13 @@
 ---
+title: Using in Loops
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Using in Loops} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Using in Loops} ]
+  - [ meta, { name: description , content: How to use Vs Vue3 Select component in loops} ]
+  - [ meta, { name: og:description , content: How to use Vs Vue3 Select component in loops} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/use-cases/loops/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/use-cases/loops/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
 sidebarDepth: 0
 prev:
   text: AJAX

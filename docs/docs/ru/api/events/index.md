@@ -1,4 +1,13 @@
 ---
+title: События
+head:
+  - [ meta, { name: title , content: События компонента Vs Vue3 Select } ]
+  - [ meta, { name: og:title , content: События компонента Vs Vue3 Select } ]
+  - [ meta, { name: description , content: Документация событий компонента Vs Vue3 Select } ]
+  - [ meta, { name: og:description , content: Документация событий компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/api/events/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/api/events/ } ]
+  - [ meta, { name: keywords , content: "select, select input,multiselect,events,component events,vue,vue3,vue3 component, vue3 select, события компонента" } ]
 sidebarDepth: 0
 prev:
   text: Слоты
@@ -78,7 +87,7 @@ this.$emit('option:created', newOption)
 Срабатывает всякий раз, когда строка поиска изменяется, генерируйте событие 'search'. Событие передается с двумя параметрами:
 строкой поиска и функцией, которая принимает логический параметр для переключения состояния загрузки.
 
-Полный пример смотрите в [руководстве по AJAX](../../../ru/use-cases/ajax).
+Полный пример смотрите в [руководстве по AJAX](../../../ru/use-cases/ajax/).
 
 ```js
 /**

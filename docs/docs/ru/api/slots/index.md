@@ -1,4 +1,14 @@
 ---
+title: Слоты
+head:
+  - [ meta, { name: title , content: Слоты компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: Слоты компонента Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Документация по доступным в компоненте Vs Vue3 Select слотам} ]
+  - [ meta, { name: og:description , content: Документация по доступным в компоненте Vs Vue3 Select слотам} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/api/slots/ } ]
+  - [ link, { rel: canonical, href: https://vue3-select.va-soft.ru/ru/api/slots/ } ]
+  - [ meta, { name: keywords, href: "select,select input,multiselect,slot,component slots,vue,vue3,vue3 component,vue3 select"} ]
+  
 sidebarDepth: 0
 prev:
     text: Параметры

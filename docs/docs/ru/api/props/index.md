@@ -1,5 +1,13 @@
 ---
-description: Описание параметров компонента Vs Vue3 Select Component
+title: Параметры
+head:
+  - [ meta, { name: title , content: Параметры Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: Параметры Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Документация по параметрам компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Документация по параметрам компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/api/props/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/api/props/ } ]
+  - [ meta, { name: keywords , content: "select, select input,multiselect,props,properties,component props,vue,vue3,vue3 component, vue3 select, параметры компонента" } ]
 prev:
   text: Фильтрация опций
   link: /ru/customizing/filtering
@@ -27,7 +35,7 @@ ariaLabel: {
 
 Если true выпадающий список будет добавляться в конец тега body, а размер и позиция будут вычисляться динамически. Это может потребоваться когда есть проблемы с выходом списка за пределы видимости или с z-index.
 
-Более детально описано в разделе [Позиция выпадающего списка](../../../ru/customizing/positioning).
+Более детально описано в разделе [Позиция выпадающего списка](../../../ru/customizing/positioning/).
 
 ```js
 appendToBody: {
@@ -75,7 +83,7 @@ autoSelect: {
 
 Если функция возвращается из calculatePosition, она будет вызвана, когда выпадающий список будет удален из DOM. Это позволяет выполнять любую сборку мусора, которая вам может понадобиться.
 
-Более подробную информацию смотрите в разделе [Положение выпадающего списка](../../../ru/customizing/positioning).
+Более подробную информацию смотрите в разделе [Положение выпадающего списка](../../../ru/customizing/positioning/).
 
 ```js
 calculatePosition: {
@@ -162,7 +170,7 @@ API для перезаписи компонентов по умолчанию `
 
 Объект, предоставленный в prop компонентов, будет объединен с компонентами Vs Vue3 Select по умолчанию.
 
-Более подробную информацию смотрите в [Компоненты](../../../ru/styling/components).
+Более подробную информацию смотрите в [Компоненты](../../../ru/styling/components/).
 
 ```js
 import Deselect from './Deselect';

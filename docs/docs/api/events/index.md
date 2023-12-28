@@ -1,4 +1,13 @@
 ---
+title: Events
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select component events } ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select component events } ]
+  - [ meta, { name: description , content: Documentation for all Vs Vue3 Select component events } ]
+  - [ meta, { name: og:description , content: Documentation for all Vs Vue3 Select component events } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/api/events/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/api/events/ } ]
+  - [ meta, { name: keywords , content: "select, select input,multiselect,events,component events,vue,vue3,vue3 component, vue3 select" } ]
 prev:
   text: Slots
   link: /api/slots
@@ -82,7 +91,7 @@ Anytime the search string changes, emit the 'search' event. The event is passed
 with two parameters: the search string, and a function that accepts a boolean
 parameter to toggle the loading state.
 
-See the [AJAX Guide](../../use-cases/ajax) for a complete
+See the [AJAX Guide](../../use-cases/ajax/) for a complete
 example.
 
 ```js

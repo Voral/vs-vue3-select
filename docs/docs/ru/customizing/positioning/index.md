@@ -1,4 +1,13 @@
 ---
+title: Позиционирование списка
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Позиционирование списка} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Позиционирование списка} ]
+  - [ meta, { name: description , content: Управление позицией выпадающего списка в компоненте Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Управление позицией выпадающего списка в компоненте Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/customizing/positioning/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/customizing/positioning/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,dropdown position"} ]
 sidebarDepth: 0
 prev:
   text: События клавиатуры

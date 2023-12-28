@@ -1,4 +1,13 @@
 ---
+title: Разбивка на страницы
+head:
+  - [ meta, { name: title , content: Vs Vue3 Select Разбивка на страницы} ]
+  - [ meta, { name: og:title , content: Vs Vue3 Select Разбивка на страницы} ]
+  - [ meta, { name: description , content: Как добавить в выпадающий список компонента Vs Vue3 Select постраничную навигацию } ]
+  - [ meta, { name: og:description , content: Как добавить в выпадающий список компонента Vs Vue3 Select постраничную навигацию } ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/use-cases/pagination/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/use-cases/pagination/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown"} ]
 sidebarDepth: 0
 prev:
  text: Ограничение выбора

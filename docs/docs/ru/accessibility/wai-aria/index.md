@@ -1,4 +1,13 @@
 ---
+title: Спецификация WAI-ARIA
+head:
+   - [ meta, { name: title , content: Vs Vue3 Select поддержка спецификации WAI-ARIA} ]
+   - [ meta, { name: og:title , content: Vs Vue3 Select поддержка спецификации WAI-ARIA } ]
+   - [ meta, { name: description , content: За счет чего компонент Vs Vue3 Select поддерживает спецификацию WAI-ARIA } ]
+   - [ meta, { name: og:description , content: За счет чего компонент Vs Vue3 Select поддерживает спецификацию WAI-ARIA } ]
+   - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/accessibility/wai-aria/ } ]
+   - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/accessibility/wai-aria/ } ]
+   - [ meta, { name: keywords , content: "select, select input,multiselect,wai-aria,accessibility" } ]
 sidebarDepth: 0
 prev:
  text: Стилизация слотами

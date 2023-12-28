@@ -1,4 +1,13 @@
 ---
+title: Фильтрация опций
+head:
+  - [ meta, { name: title , content: Фильтрация опций компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:title , content: Фильтрация опций компонента Vs Vue3 Select} ]
+  - [ meta, { name: description , content: Примеры фильтрации опций в выпадающем списке компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:description , content: Примеры фильтрации опций в выпадающем списке компонента Vs Vue3 Select} ]
+  - [ meta, { name: og:url , content: https://vue3-select.va-soft.ru/ru/customizing/filtering/ } ]
+  - [ link, { rel: canonical , href: https://vue3-select.va-soft.ru/ru/customizing/filtering/ } ]
+  - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,option filter,select option filtering,фильтрация в выпадающем списке"}]
 sidebarDepth: 0
 prev:
   text: Открытие списка
