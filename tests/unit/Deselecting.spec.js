@@ -1,6 +1,10 @@
 import {it, describe, expect, vi} from 'vitest'
 import {mountDefault, selectWithProps} from '#/helpers.js'
 
+const preventDefault = vi.fn()
+function clickEvent(currentTarget) {
+    return {currentTarget, preventDefault, target:currentTarget}
+}
 describe('Removing values', () => {
     it('can remove the given tag when its close icon is clicked', async () => {
         const Select = selectWithProps({multiple: true})
@@ -156,5 +160,19 @@ describe('Removing values', () => {
                 Select.find('button.vs__clear').attributes().disabled
             ).toBeDefined()
         })
+
+        it('toggleDropdown should prevent default when clicking on ignored buttons', async () => {
+            // Создаем Vue приложение
+            const Select = selectWithProps({
+                options: ['foo', 'bar'],
+                modelValue: 'foo',
+            });
+            Select.vm.$data._value = 'foo';
+            Select.vm.open = true
+            const event = clickEvent(Select.vm.$refs.clearButton);
+            Select.vm.toggleDropdown(event)
+            expect(preventDefault.mock.calls).toHaveLength(2);
+            expect(preventDefault).toHaveBeenCalledWith();
+        });
     })
 })

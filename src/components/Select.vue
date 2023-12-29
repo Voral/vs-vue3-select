@@ -1201,31 +1201,26 @@ export default {
       if (targetIsNotSearch) {
         event.preventDefault()
       }
-
       //  don't react to click on deselect/clear buttons,
       //  they dropdown state will be set in their click handlers
       const ignoredButtons = [
         ...(this.deselectButtons || []),
         ...([this.$refs['clearButton']] || []),
       ]
-
-      if (
-          this.searchEl === undefined ||
-          ignoredButtons
+      if (ignoredButtons
               .filter(Boolean)
               .some((ref) => ref.contains(event.target) || ref === event.target)
       ) {
         event.preventDefault()
         return
       }
-
       if (this.open && targetIsNotSearch) {
-        this.searchEl.blur()
+        if (!!this.searchEl) this.searchEl.blur()
       } else if (this.open && !targetIsNotSearch && !this.searchable) {
         this.open = false
       } else if (!this.disabled) {
         this.open = true
-        this.searchEl.focus()
+        if (!!this.searchEl) this.searchEl.focus()
       }
     },
 
