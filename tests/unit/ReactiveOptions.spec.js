@@ -103,6 +103,16 @@ describe('Reset on options change', () => {
 
             expect(spy).toHaveBeenCalledTimes(1)
         })
+
+        it('always reset the value when the multiple prop changes', async () => {
+            spy = vi.spyOn(VueSelect.methods, 'clearSelection')
+            const Select = shallowMount(VueSelect, {
+                props: {multiple: true, options: ['one'], modelValue: 'one'},
+            })
+            await Select.setProps({multiple: false})
+            expect(spy).toHaveBeenCalledTimes(1)
+        })
+
     })
 
     it('should reset the selected value when the options property changes', async () => {
