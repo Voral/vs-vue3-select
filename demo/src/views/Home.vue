@@ -29,7 +29,6 @@ const links = computed(() => {
   )
 })
 </script>
-
 <template>
   <div>
     <div class="section">

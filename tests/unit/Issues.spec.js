@@ -1,5 +1,5 @@
 import {describe, expect, it, vi} from 'vitest'
-import {mountDefault} from '#/helpers.js'
+import {mountDefault,selectWithProps} from '#/helpers.js'
 
 describe('IE Issues', () => {
     it('The dropdown menu does not collapse when clicking on the scrollbar in IE', async () => {
@@ -17,5 +17,19 @@ describe('IE Issues', () => {
         expect(spyUp).toHaveBeenCalledTimes(1)
         expect(spyDown).toHaveBeenCalledTimes(1)
     })
+    it('emit search:blur when search is empty, options list empty and mousedown is emitted, but mouseup not emitted',() => {
+        /**
+         * @todo To reproduce it in reality. IE11 is probably needed for this.
+         */
+        const Select = selectWithProps({
+            options: [],
+        })
+        Select.vm.open = true
+        Select.vm.mousedown = true;
+        Select.vm.searching = false;
+        Select.vm.onSearchBlur()
 
+        expect(Select.emitted()['search:blur'].length).toBe(1)
+        expect(Select.vm.search).toEqual('')
+    });
 })
