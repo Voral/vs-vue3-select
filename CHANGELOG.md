@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/voral/vs-vue3-select/compare/v1.3.1...v1.3.2) (2024-01-02)
+
+
+### Bug Fixes
+
+* Behavior when an incorrect reduce function is passed ([6bbc0f6](https://github.com/voral/vs-vue3-select/commit/6bbc0f6887c04e49e4d49a4e50c6dc010356763b))
+
 ### [1.3.1](https://github.com/voral/vs-vue3-select/compare/v1.3.0...v1.3.1) (2023-12-29)
 
 
