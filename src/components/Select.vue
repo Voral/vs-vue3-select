@@ -1011,7 +1011,6 @@ export default {
       if (!this.taggable && shouldReset()) {
         this.clearSelection()
       }
-
       if (this.modelValue && this.isTrackingValues) {
         this.setInternalValueFromOptions(this.modelValue)
       }
@@ -1025,7 +1024,7 @@ export default {
       immediate: true,
       handler(val) {
         if (this.isTrackingValues) {
-          this.setInternalValueFromOptions(val)
+           this.setInternalValueFromOptions(val)
         }
       },
     },
@@ -1187,7 +1186,6 @@ export default {
           value = this.reduce(value)
         }
       }
-
       this.$emit('update:modelValue', value)
     },
 
@@ -1271,25 +1269,12 @@ export default {
      * @returns {*}
      */
     findOptionFromReducedValue(value) {
-      const predicate = (option) =>
+      const predicate = option =>
           JSON.stringify(this.reduce(option)) === JSON.stringify(value)
 
-      const matches = [...this.options, ...this.pushedTags].filter(predicate)
+      const matches = [...this.options, ...this.pushedTags].find(predicate)
 
-      if (matches.length === 1) {
-        return matches[0]
-      }
-      /**
-       * This second loop is needed to cover an edge case where `taggable` + `reduce`
-       * were used in conjunction with a `create-option` that doesn't create a
-       * unique reduced value.
-       * @see https://github.com/sagalbot/vue-select/issues/1089#issuecomment-597238735
-       */
-      return (
-          matches.find((match) =>
-              this.optionComparator(match, this.$data._value)
-          ) || value
-      )
+      return matches || value;
     },
 
     /**

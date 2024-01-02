@@ -32,17 +32,6 @@ const links = computed(() => {
 <template>
   <div>
     <div class="section">
-      <h2 class="title">Autocomplete search text, multiple</h2>
-      <v-select
-          v-model="selectedOptions"
-          :auto-select="true"
-          :options="options"
-          :multiple="true"
-          :autoscroll="false"
-      />
-    </div>
-
-    <div class="section">
       <h2 class="title">Autocomplete search text</h2>
       <v-select v-model="selected" :options="options" :auto-select="true" :complete-search="true"/>
     </div>
