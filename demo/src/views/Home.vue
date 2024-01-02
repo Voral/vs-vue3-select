@@ -38,6 +38,7 @@ const links = computed(() => {
           :auto-select="true"
           :options="options"
           :multiple="true"
+          :autoscroll="false"
       />
     </div>
 
