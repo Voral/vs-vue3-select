@@ -799,9 +799,7 @@ export default {
      */
     searchEl() {
       return this.$slots['search']
-          ? this.$refs.selectedOptions.querySelector(
-              this.searchInputQuerySelector
-          )
+          ? this.$refs.selectedOptions.querySelector(this.searchInputQuerySelector)
           : this.$refs.search
     },
 
@@ -1024,7 +1022,7 @@ export default {
       immediate: true,
       handler(val) {
         if (this.isTrackingValues) {
-           this.setInternalValueFromOptions(val)
+          this.setInternalValueFromOptions(val)
         }
       },
     },
@@ -1206,8 +1204,8 @@ export default {
         ...([this.$refs['clearButton']] || []),
       ]
       if (ignoredButtons
-              .filter(Boolean)
-              .some((ref) => ref.contains(event.target) || ref === event.target)
+          .filter(Boolean)
+          .some((ref) => ref.contains(event.target) || ref === event.target)
       ) {
         event.preventDefault()
         return

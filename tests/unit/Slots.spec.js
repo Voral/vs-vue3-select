@@ -20,6 +20,19 @@ describe('Scoped Slots', () => {
 
         expect(Select.get('.vs__selected-options').text()).toEqual('one')
     })
+    it('Select slot with custom selector', () => {
+        const Select = mountDefault(
+            {modelValue: 'one', searchInputQuerySelector:'.test-input'},
+            {
+                slots: {
+                    'search': '<input class="test-input random-extended-123salt">',
+                },
+            }
+        )
+
+        expect(Select.vm.searchEl.classList.contains('test-input')).toEqual(true);
+        expect(Select.vm.searchEl.classList.contains('random-extended-123salt')).toEqual(true);
+    })
 
     describe('Slot: selected-option', () => {
         it('receives an option object to the selected-option slot', () => {
