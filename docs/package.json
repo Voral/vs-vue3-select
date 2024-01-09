@@ -31,7 +31,6 @@
     "@vuepress-denaro/vuepress-plugin-sitemap": "^1.3.1",
     "dotenv": "^16.3.1",
     "fuse.js": "^7.0.0",
-    "lodash.debounce": "^4.0.8",
     "vite": "^5.0.6"
   }
 }

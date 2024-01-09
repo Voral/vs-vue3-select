@@ -153,9 +153,6 @@ importers:
       fuse.js:
         specifier: ^7.0.0
         version: 7.0.0
-      lodash.debounce:
-        specifier: ^4.0.8
-        version: 4.0.8
       vite:
         specifier: ^5.0.6
         version: 5.0.6
@@ -6332,6 +6329,7 @@ packages:
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: true
 
   /lodash.ismatch@4.4.0:
     resolution: {integrity: sha512-fPMfXjGQEV9Xsq/8MTSgUf255gawYRbjwMyDbcvDhXgV7enSZA0hynz6vMPnpAb5iONEzBHBPsT+0zes5Z301g==}
