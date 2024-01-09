@@ -6,7 +6,7 @@ import VueSelect from '@/components/Select.vue'
 const preventDefault = vi.fn()
 
 function clickEvent(currentTarget) {
-    return {currentTarget, preventDefault}
+    return {currentTarget, preventDefault,target:currentTarget}
 }
 
 describe('Toggling Dropdown', () => {
@@ -191,5 +191,18 @@ describe('Toggling Dropdown', () => {
 
         expect(Select.classes('vs--open')).toBeTruthy()
         expect(Select.find('.vs__dropdown-menu li')).toBeTruthy()
+    })
+    it('will close opened dropdown on second click in mode searchable = false', async () => {
+        const Select = selectWithProps({
+            searchable: false,
+            options: ['one'],
+        })
+        Select.vm.toggleDropdown(clickEvent(Select.vm.$refs.search))
+        await Select.vm.$nextTick()
+        expect(Select.vm.open).toEqual(true)
+
+        Select.vm.toggleDropdown(clickEvent(Select.vm.$refs.search))
+        await Select.vm.$nextTick()
+        expect(Select.vm.open).toEqual(false)
     })
 })

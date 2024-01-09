@@ -32,11 +32,6 @@ const links = computed(() => {
 <template>
   <div>
     <div class="section">
-      <h2 class="title">Autocomplete search text</h2>
-      <v-select v-model="selected" :options="options" :auto-select="true" :complete-search="true"/>
-    </div>
-
-    <div class="section">
       <h2 class="title">Autocomplete search text, custom slot</h2>
       <v-select v-model="selected" :options="options" :auto-select="true" :complete-search="true"
                 :selectable="option => option.value !== 'AF'"
