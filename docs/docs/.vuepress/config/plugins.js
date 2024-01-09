@@ -23,7 +23,7 @@ export default [
     }),
     sitemapPlugin({
         hostname: 'https://vue3-select.va-soft.ru/',
-        exclude: ['/404.html', 'sandbox.html']
+        exclude: ['/404.html', '/sandbox.html','/ru/sandbox.html',]
     }),
     googleAnalyticsPlugin({
         id: process.env.GOOGLE_ANALYTICS_ID,

@@ -22,7 +22,6 @@
     "depcheck": "^1.4.7",
     "vue": "^3.3.10",
     "vuepress": "2.0.0-rc.0",
-    "vuepress-plugin-sitemap2": "2.0.0-rc.4",
     "vuepress-plugin-yandex-metrika": "^1.0.1"
   },
   "dependencies": {
