@@ -92,9 +92,6 @@ importers:
       vue-fuse:
         specifier: ^4.1.1
         version: 4.1.1(fuse.js@6.6.2)(vue@3.3.10)
-      vue-router:
-        specifier: ^4.2.4
-        version: 4.2.5(vue@3.3.10)
       vue-tsc:
         specifier: ^1.6.5
         version: 1.8.24(typescript@5.3.2)
@@ -107,6 +104,9 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.3.10(typescript@5.3.2)
+      vue-router:
+        specifier: ^4.2.5
+        version: 4.2.5(vue@3.3.10)
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^4.2.3

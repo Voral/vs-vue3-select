@@ -7,8 +7,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "vs-vue3-select": "workspace:^",
     "vue": "^3.3.4",
-    "vs-vue3-select": "workspace:^"
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
