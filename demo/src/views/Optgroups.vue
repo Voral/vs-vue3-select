@@ -42,17 +42,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 const selected = ref(null)
-// const options = ref([
-//   { value: 'AF', label: 'Afghanistan' },
-//   { value: 'AX', label: 'Åland Islands' },
-//   { value: 'AL', label: 'Albania' },
-//   { value: 'DZ', label: 'Algeria' },
-//   { value: 'AS', label: 'American Samoa' },
-//   { value: 'AD', label: 'Andorra' },
-// ])
 
 const optgroups = [
   {
@@ -96,5 +88,3 @@ const optgroupsMix = [
   },
 ]
 </script>
-
-<style scoped></style>

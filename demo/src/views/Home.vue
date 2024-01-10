@@ -15,7 +15,6 @@ const baseSelectOptions = ref(
   }))
 )
 const selectedOption = ref()
-const selectedOptions = ref()
 
 setTimeout(() => {
   selectedOption.value = baseSelectOptions.value[0]

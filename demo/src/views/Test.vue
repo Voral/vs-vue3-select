@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /* v8 ignore next 3333 */
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 const selected = ref({
   name: 'Bar',
