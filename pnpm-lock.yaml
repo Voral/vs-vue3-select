@@ -89,9 +89,6 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.3.10(typescript@5.3.2)
-      vue-fuse:
-        specifier: ^4.1.1
-        version: 4.1.1(fuse.js@6.6.2)(vue@3.3.10)
       vue-tsc:
         specifier: ^1.6.5
         version: 1.8.24(typescript@5.3.2)
@@ -3785,11 +3782,6 @@ packages:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
     dev: true
 
-  /fuse.js@6.6.2:
-    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
-    engines: {node: '>=10'}
-    dev: true
-
   /fuse.js@7.0.0:
     resolution: {integrity: sha512-14F4hBIxqKvD4Zz/XjDc3y94mNZN6pRv3U13Udo0lNLCWRBUsrMv2xwcF/y/Z5sV6+FQW+/ow68cHpm4sunt8Q==}
     engines: {node: '>=10'}
@@ -6446,21 +6438,6 @@ packages:
     resolution: {integrity: sha512-lqWs/7fdRXoSBAlbouHBX+LNuaY6gI9xWW34m/ZIz9zVPYHEyw0b2/zaCBwlKx0NtKTeF/6pOpvrxVkh7nhIYg==}
     dev: true
 
-  /vue-demi@0.11.4(vue@3.3.10):
-    resolution: {integrity: sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: 3.3.10(typescript@5.3.2)
-    dev: true
-
   /vue-demi@0.14.6(vue@3.3.10):
     resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
     engines: {node: '>=12'}
@@ -6506,21 +6483,6 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vue-fuse@4.1.1(fuse.js@6.6.2)(vue@3.3.10):
-    resolution: {integrity: sha512-bhuTiniVK3HmTcxvksrzPgDWPFTEDYiWbJa01E7yT2lRPtE4BVb5cXUBUmqtb5rCkDOsLgMh1n9mRlHQImYNkA==}
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      fuse.js: ^6.4.6
-      vue: ^3.2.20
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      fuse.js: 6.6.2
-      vue: 3.3.10(typescript@5.3.2)
-      vue-demi: 0.11.4(vue@3.3.10)
     dev: true
 
   /vue-router@4.2.5(vue@3.3.10):

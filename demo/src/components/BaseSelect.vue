@@ -5,17 +5,17 @@ export default {
 </script>
 
 <script setup lang="ts">
-import {computed, useAttrs} from 'vue'
+import { computed, useAttrs } from 'vue'
 
 const props = withDefaults(
-    defineProps<{
-      searchable?: boolean
-      square?: boolean
-    }>(),
-    {
-      searchable: false,
-      square: false,
-    }
+  defineProps<{
+    searchable?: boolean
+    square?: boolean
+  }>(),
+  {
+    searchable: false,
+    square: false,
+  }
 )
 
 const borderRadius = computed(() => {
@@ -38,12 +38,12 @@ function selectedOptionNameClass(name: string) {
 <template>
   <div>
     <v-select
-        v-bind="$attrs"
-        :clearable="false"
-        :searchable="searchable"
-        label="name"
-        append-to-body
-        transition="fade"
+      v-bind="$attrs"
+      :clearable="false"
+      :searchable="searchable"
+      label="name"
+      append-to-body
+      transition="fade"
     >
       <template #option="{ name }">
         <div class="option--scroll">
