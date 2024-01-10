@@ -65,9 +65,6 @@ importers:
       jsdom:
         specifier: ^20.0.0
         version: 20.0.3
-      postcss:
-        specifier: ^8.4.24
-        version: 8.4.32
       sass:
         specifier: ^1.62.1
         version: 1.69.5

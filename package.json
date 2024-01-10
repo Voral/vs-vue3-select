@@ -72,7 +72,6 @@
     "eslint": "^8.20.0",
     "eslint-plugin-vue": "^9.2.0",
     "jsdom": "^20.0.0",
-    "postcss": "^8.4.24",
     "sass": "^1.62.1",
     "standard-version": "^9.5.0",
     "typescript": "^5.0.4",
