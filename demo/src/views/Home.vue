@@ -1,7 +1,7 @@
 <script setup>
-import {computed, ref} from 'vue'
+import { computed, ref } from 'vue'
 import countries from '../mocks/countryCodes.js'
-import {useRouter} from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const selected = ref(null)
 const options = ref(countries)
@@ -9,10 +9,10 @@ const options = ref(countries)
 const computedOptions = computed(() => countries)
 
 const baseSelectOptions = ref(
-    countries.map((country) => ({
-      name: country.label,
-      value: country.value,
-    }))
+  countries.map((country) => ({
+    name: country.label,
+    value: country.value,
+  }))
 )
 const selectedOption = ref()
 const selectedOptions = ref()
@@ -25,7 +25,7 @@ const links = computed(() => {
   const router = useRouter()
   const excludes = ['Home', '404']
   return router.options.routes.filter(
-      (r) => r.path.startsWith('/') && !excludes.includes(r.name)
+    (r) => r.path.startsWith('/') && !excludes.includes(r.name)
   )
 })
 </script>
@@ -33,11 +33,18 @@ const links = computed(() => {
   <div>
     <div class="section">
       <h2 class="title">Autocomplete search text, custom slot</h2>
-      <v-select v-model="selected" :options="options" :auto-select="true" :complete-search="true"
-                :selectable="option => option.value !== 'AF'"
+      <v-select
+        v-model="selected"
+        :options="options"
+        :auto-select="true"
+        :complete-search="true"
+        :selectable="(option) => option.value !== 'AF'"
       >
         <template v-slot:typeahead="{ canCompleteSearch, completedText }">
-          <div class="vs__search_position vs__search_complete" v-if="canCompleteSearch && completedText!==''">
+          <div
+            class="vs__search_position vs__search_complete"
+            v-if="canCompleteSearch && completedText !== ''"
+          >
             {{ completedText }} ...
           </div>
         </template>
@@ -64,10 +71,10 @@ const links = computed(() => {
         <li>clearable: false</li>
       </ul>
       <v-select
-          v-model="selected"
-          :options="computedOptions"
-          :clearable="false"
-          :searchable="false"
+        v-model="selected"
+        :options="computedOptions"
+        :clearable="false"
+        :searchable="false"
       />
     </div>
   </div>

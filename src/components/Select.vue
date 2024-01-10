@@ -4,60 +4,65 @@
 
 <template>
   <div :dir="dir" class="v-select" :class="stateClasses">
-    <slot name="header" v-bind="scope.header"/>
+    <slot name="header" v-bind="scope.header" />
     <div
-        :id="`vs${uid}__combobox`"
-        ref="toggle"
-        class="vs__dropdown-toggle"
-        role="combobox"
-        :aria-expanded="dropdownOpen.toString()"
-        :aria-owns="`vs${uid}__listbox`"
-        :aria-label="ariaLabel"
-        v-click-outside="clickOutside"
-        @mousedown="toggleDropdown($event)"
+      :id="`vs${uid}__combobox`"
+      ref="toggle"
+      class="vs__dropdown-toggle"
+      role="combobox"
+      :aria-expanded="dropdownOpen.toString()"
+      :aria-owns="`vs${uid}__listbox`"
+      :aria-label="ariaLabel"
+      v-click-outside="clickOutside"
+      @mousedown="toggleDropdown($event)"
     >
       <div ref="selectedOptions" class="vs__selected-options">
         <slot
-            v-for="(option, i) in selectedValue"
-            name="selected-option-container"
-            :option="normalizeOptionForSlot(option)"
-            :deselect="deselect"
-            :multiple="multiple"
-            :disabled="disabled"
+          v-for="(option, i) in selectedValue"
+          name="selected-option-container"
+          :option="normalizeOptionForSlot(option)"
+          :deselect="deselect"
+          :multiple="multiple"
+          :disabled="disabled"
         >
           <span :key="getOptionKey(option)" class="vs__selected">
             <slot
-                name="selected-option"
-                v-bind="normalizeOptionForSlot(option)"
+              name="selected-option"
+              v-bind="normalizeOptionForSlot(option)"
             >
               {{ getOptionLabel(option) }}
             </slot>
             <button
-                v-if="multiple"
-                :ref="(el) => (deselectButtons[i] = el)"
-                :disabled="disabled"
-                type="button"
-                class="vs__deselect"
-                :title="`Deselect ${getOptionLabel(option)}`"
-                :aria-label="`Deselect ${getOptionLabel(option)}`"
-                @click="deselect(option)"
+              v-if="multiple"
+              :ref="(el) => (deselectButtons[i] = el)"
+              :disabled="disabled"
+              type="button"
+              class="vs__deselect"
+              :title="`Deselect ${getOptionLabel(option)}`"
+              :aria-label="`Deselect ${getOptionLabel(option)}`"
+              @click="deselect(option)"
             >
-              <component :is="childComponents.Deselect"/>
+              <component :is="childComponents.Deselect" />
             </button>
           </span>
         </slot>
         <div class="vs__input-box">
           <slot name="typeahead" v-bind="scope.typeahead">
-            <div class="vs__search_position vs__search_complete"
-                 v-if="scope.typeahead.canCompleteSearch && scope.typeahead.completedText!==''">
+            <div
+              class="vs__search_position vs__search_complete"
+              v-if="
+                scope.typeahead.canCompleteSearch &&
+                scope.typeahead.completedText !== ''
+              "
+            >
               {{ scope.typeahead.completedText }}
             </div>
           </slot>
           <slot name="search" v-bind="scope.search">
             <input
-                class="vs__search vs__search_position"
-                v-bind="scope.search.attributes"
-                v-on="scope.search.events"
+              class="vs__search vs__search_position"
+              v-bind="scope.search.attributes"
+              v-on="scope.search.events"
             />
           </slot>
         </div>
@@ -65,23 +70,23 @@
 
       <div ref="actions" class="vs__actions">
         <button
-            v-show="showClearButton"
-            ref="clearButton"
-            :disabled="disabled"
-            type="button"
-            class="vs__clear"
-            title="Clear Selected"
-            aria-label="Clear Selected"
-            @click="clearSelection"
+          v-show="showClearButton"
+          ref="clearButton"
+          :disabled="disabled"
+          type="button"
+          class="vs__clear"
+          title="Clear Selected"
+          aria-label="Clear Selected"
+          @click="clearSelection"
         >
-          <component :is="childComponents.Deselect"/>
+          <component :is="childComponents.Deselect" />
         </button>
 
         <slot name="open-indicator" v-bind="scope.openIndicator">
           <component
-              :is="childComponents.OpenIndicator"
-              v-if="!noDrop"
-              v-bind="scope.openIndicator.attributes"
+            :is="childComponents.OpenIndicator"
+            v-if="!noDrop"
+            v-bind="scope.openIndicator.attributes"
           />
         </slot>
 
@@ -92,24 +97,24 @@
     </div>
     <transition :name="transition">
       <ul
-          v-if="dropdownOpen"
-          :id="`vs${uid}__listbox`"
-          ref="dropdownMenu"
-          :key="`vs${uid}__listbox`"
-          v-append-to-body
-          class="vs__dropdown-menu"
-          role="listbox"
-          tabindex="-1"
-          @mousedown.prevent="onMousedown"
-          @mouseup="onMouseUp"
+        v-if="dropdownOpen"
+        :id="`vs${uid}__listbox`"
+        ref="dropdownMenu"
+        :key="`vs${uid}__listbox`"
+        v-append-to-body
+        class="vs__dropdown-menu"
+        role="listbox"
+        tabindex="-1"
+        @mousedown.prevent="onMousedown"
+        @mouseup="onMouseUp"
       >
-        <slot name="list-header" v-bind="scope.listHeader"/>
+        <slot name="list-header" v-bind="scope.listHeader" />
         <li
-            v-for="(option, index) in filteredOptions"
-            :id="`vs${uid}__option-${index}`"
-            :key="getOptionKey(option)"
-            role="option"
-            :class="{
+          v-for="(option, index) in filteredOptions"
+          :id="`vs${uid}__option-${index}`"
+          :key="getOptionKey(option)"
+          role="option"
+          :class="{
             'vs__dropdown-option': !isOptGroupOption(option),
             'vs__dropdown-optgroup-option': isOptGroupOption(option),
             'vs__dropdown-option--deselect':
@@ -120,11 +125,11 @@
               isOptionSelected(option),
             'vs__dropdown-option--disabled': !selectable(option),
           }"
-            :aria-selected="index === typeAheadPointer ? true : null"
-            @mouseover="selectable(option) ? updateTypeAheadPointer(index) : null"
-            @mouseout="updateTypeAheadPointer(-1)"
-            @click.prevent.stop="selectable(option) ? select(option) : null"
-            @touchstart="
+          :aria-selected="index === typeAheadPointer ? true : null"
+          @mouseover="selectable(option) ? updateTypeAheadPointer(index) : null"
+          @mouseout="updateTypeAheadPointer(-1)"
+          @click.prevent.stop="selectable(option) ? select(option) : null"
+          @touchstart="
             selectable(option) ? updateTypeAheadPointer(index) : null
           "
         >
@@ -140,16 +145,16 @@
             Sorry, no matching options.
           </slot>
         </li>
-        <slot name="list-footer" v-bind="scope.listFooter"/>
+        <slot name="list-footer" v-bind="scope.listFooter" />
       </ul>
       <ul
-          v-else
-          :id="`vs${uid}__listbox`"
-          role="listbox"
-          style="display: none; visibility: hidden"
+        v-else
+        :id="`vs${uid}__listbox`"
+        role="listbox"
+        style="display: none; visibility: hidden"
       ></ul>
     </transition>
-    <slot name="footer" v-bind="scope.footer"/>
+    <slot name="footer" v-bind="scope.footer" />
   </div>
 </template>
 
@@ -167,9 +172,9 @@ import uniqueId from '@/utility/uniqueId.js'
  * @name VueSelect
  */
 export default {
-  components: {...childComponents},
+  components: { ...childComponents },
 
-  directives: {appendToBody, clickOutside},
+  directives: { appendToBody, clickOutside },
 
   mixins: [pointerScroll, typeAheadPointer, ajax],
 
@@ -212,7 +217,7 @@ export default {
      */
     pasteTrim: {
       type: Boolean,
-      default: true
+      default: true,
     },
 
     /**
@@ -222,7 +227,7 @@ export default {
      */
     pasteSeparator: {
       type: String,
-      default: ''
+      default: '',
     },
     /**
      * An object with any custom components that you'd like to overwrite
@@ -426,7 +431,7 @@ export default {
         if (typeof option === 'object') {
           if (!option.hasOwnProperty(this.label)) {
             return console.warn(
-                `[vs-vue3-select warn]: Label key "option.${this.label}" does not` +
+              `[vs-vue3-select warn]: Label key "option.${this.label}" does not` +
                 ` exist in options object ${JSON.stringify(option)}.\n` +
                 'https://vue3-select.va-soft.ru/api/props/#getoptionlabel'
             )
@@ -459,7 +464,9 @@ export default {
         if (option === null || typeof option !== 'object') {
           return option
         }
-        return option.hasOwnProperty('id') ? option.id : sortAndStringify(option)
+        return option.hasOwnProperty('id')
+          ? option.id
+          : sortAndStringify(option)
       },
     },
 
@@ -516,9 +523,9 @@ export default {
       type: Function,
       default(option, label, search) {
         return (
-            (label || '')
-                .toLocaleLowerCase()
-                .indexOf(search.toLocaleLowerCase()) > -1
+          (label || '')
+            .toLocaleLowerCase()
+            .indexOf(search.toLocaleLowerCase()) > -1
         )
       },
     },
@@ -555,8 +562,8 @@ export default {
       type: Function,
       default(option) {
         return typeof this.optionList[0] === 'object'
-            ? {[this.label]: option}
-            : option
+          ? { [this.label]: option }
+          : option
       },
     },
 
@@ -581,8 +588,8 @@ export default {
      */
     clearSearchOnBlur: {
       type: Function,
-      default: function ({clearSearchOnSelect, multiple}) {
-        return clearSearchOnSelect;
+      default: function ({ clearSearchOnSelect, multiple }) {
+        return clearSearchOnSelect
       },
     },
 
@@ -686,7 +693,7 @@ export default {
        * @param left {string} absolute position left value in pixels relative to the document
        * @return {function|void}
        */
-      default(dropdownList, component, {width, top, left}) {
+      default(dropdownList, component, { width, top, left }) {
         dropdownList.style.top = top
         dropdownList.style.left = left
         dropdownList.style.width = width
@@ -701,7 +708,7 @@ export default {
      */
     dropdownShouldOpen: {
       type: Function,
-      default({noDrop, open, mutableLoading}) {
+      default({ noDrop, open, mutableLoading }) {
         return noDrop ? false : open && !mutableLoading
       },
     },
@@ -726,30 +733,39 @@ export default {
       _value: [], // Internal value managed by Vue Select if no `value` prop is passed
       deselectButtons: [],
       pasteProcessed: false,
-      pasteBuffer: []
+      pasteBuffer: [],
     }
   },
 
   computed: {
     getFirstSelectable() {
-      let i = 0, cnt = this.filteredOptions.length;
+      let i = 0,
+        cnt = this.filteredOptions.length
       for (; i < cnt; ++i) {
         if (this.selectable(this.filteredOptions[i])) {
-          return this.filteredOptions[i];
+          return this.filteredOptions[i]
         }
       }
-      return null;
+      return null
     },
     autocompleteText() {
-      if (!this.open || this.search === '' || this.filteredOptions.length === 0 || !this.completeSearch) {
-        return '';
+      if (
+        !this.open ||
+        this.search === '' ||
+        this.filteredOptions.length === 0 ||
+        !this.completeSearch
+      ) {
+        return ''
       }
-      const option = this.getFirstSelectable;
+      const option = this.getFirstSelectable
       if (option === null) {
-        return '';
+        return ''
       }
-      const label = this.getOptionLabel(option).replace(new RegExp(this.search, 'i'), this.search);
-      return label.startsWith(this.search) ? label : '';
+      const label = this.getOptionLabel(option).replace(
+        new RegExp(this.search, 'i'),
+        this.search
+      )
+      return label.startsWith(this.search) ? label : ''
     },
     isReducingValues() {
       return this.$props.reduce !== this.$options.props.reduce.default
@@ -799,8 +815,10 @@ export default {
      */
     searchEl() {
       return this.$slots['search']
-          ? this.$refs.selectedOptions.querySelector(this.searchInputQuerySelector)
-          : this.$refs.search
+        ? this.$refs.selectedOptions.querySelector(
+            this.searchInputQuerySelector
+          )
+        : this.$refs.search
     },
 
     /**
@@ -819,7 +837,7 @@ export default {
           search: this.search,
           completedText: this.autocompleteText,
           searching: this.searching,
-          canCompleteSearch: this.completeSearch
+          canCompleteSearch: this.completeSearch,
         },
         search: {
           attributes: {
@@ -836,10 +854,10 @@ export default {
             autocomplete: this.autocomplete,
             value: this.search,
             ...(this.dropdownOpen && this.filteredOptions[this.typeAheadPointer]
-                ? {
+              ? {
                   'aria-activedescendant': `vs${this.uid}__option-${this.typeAheadPointer}`,
                 }
-                : {}),
+              : {}),
           },
           events: {
             compositionstart: () => (this.isComposing = true),
@@ -847,8 +865,8 @@ export default {
             keydown: this.onSearchKeyDown,
             blur: this.onSearchBlur,
             focus: this.onSearchFocus,
-            input: event => this.search = event.target.value,
-            paste: this.onPaste
+            input: (event) => (this.search = event.target.value),
+            paste: this.onPaste,
           },
         },
         spinner: {
@@ -873,9 +891,9 @@ export default {
           deselect: this.deselect,
           id: this.inputId,
           selectedValue: this.selectedValue,
-          open: this.open
+          open: this.open,
         },
-        footer: {...listSlot, deselect: this.deselect},
+        footer: { ...listSlot, deselect: this.deselect },
       }
     },
 
@@ -936,8 +954,8 @@ export default {
      */
     searchPlaceholder() {
       return this.isValueEmpty && this.placeholder
-          ? this.placeholder
-          : undefined
+        ? this.placeholder
+        : undefined
     },
 
     /**
@@ -950,7 +968,7 @@ export default {
      */
     filteredOptions() {
       const optionList = this.normalizeOptGroups(
-          Array.prototype.concat(this.optionList)
+        Array.prototype.concat(this.optionList)
       )
 
       if (!this.filterable && !this.taggable) {
@@ -958,8 +976,8 @@ export default {
       }
 
       const options = this.search.length
-          ? this.filter(optionList, this.search, this)
-          : optionList
+        ? this.filter(optionList, this.search, this)
+        : optionList
       if (this.taggable && this.search.length) {
         const createdOption = this.createOption(this.search)
         if (!this.optionExists(createdOption)) {
@@ -983,7 +1001,7 @@ export default {
      */
     showClearButton() {
       return (
-          !this.multiple && this.clearable && !this.open && !this.isValueEmpty
+        !this.multiple && this.clearable && !this.open && !this.isValueEmpty
       )
     },
   },
@@ -998,13 +1016,13 @@ export default {
      */
     options(newOptions, oldOptions) {
       const shouldReset = () =>
-          typeof this.resetOnOptionsChange === 'function'
-              ? this.resetOnOptionsChange(
-                  newOptions,
-                  oldOptions,
-                  this.selectedValue
-              )
-              : this.resetOnOptionsChange
+        typeof this.resetOnOptionsChange === 'function'
+          ? this.resetOnOptionsChange(
+              newOptions,
+              oldOptions,
+              this.selectedValue
+            )
+          : this.resetOnOptionsChange
 
       if (!this.taggable && shouldReset()) {
         this.clearSelection()
@@ -1048,22 +1066,24 @@ export default {
   methods: {
     onPaste(event) {
       if (this.pasteSeparator === '' || !this.multiple) {
-        return;
+        return
       }
-      let paste = (event.clipboardData || window.clipboardData).getData("text");
-      const tags = paste.split(this.pasteSeparator);
-      this.pasteProcessed = true;
-      tags.forEach(tag => {
+      const paste = (event.clipboardData || window.clipboardData).getData(
+        'text'
+      )
+      const tags = paste.split(this.pasteSeparator)
+      this.pasteProcessed = true
+      tags.forEach((tag) => {
         if (tag !== null && tag !== '') {
-          const created = this.createOption(this.pasteTrim ? tag.trim() : tag);
-          this.select(created);
+          const created = this.createOption(this.pasteTrim ? tag.trim() : tag)
+          this.select(created)
         }
-      });
-      this.pasteProcessed = false;
-      let option = this.selectedValue.concat(this.pasteBuffer)
+      })
+      this.pasteProcessed = false
+      const option = this.selectedValue.concat(this.pasteBuffer)
       this.updateValue(option)
-      this.pasteBuffer = [];
-      event.preventDefault();
+      this.pasteBuffer = []
+      event.preventDefault()
     },
     clickOutside() {
       if (this.open) {
@@ -1079,7 +1099,7 @@ export default {
     setInternalValueFromOptions(value) {
       if (Array.isArray(value)) {
         this.$data._value = value.map((val) =>
-            this.findOptionFromReducedValue(val)
+          this.findOptionFromReducedValue(val)
         )
       } else {
         this.$data._value = this.findOptionFromReducedValue(value)
@@ -1118,8 +1138,8 @@ export default {
           this.$emit('option:selected', option)
         }
       } else if (
-          this.deselectFromDropdown &&
-          (this.clearable || (this.multiple && this.selectedValue.length > 1))
+        this.deselectFromDropdown &&
+        (this.clearable || (this.multiple && this.selectedValue.length > 1))
       ) {
         this.deselect(option)
       }
@@ -1133,9 +1153,9 @@ export default {
     deselect(option) {
       this.$emit('option:deselecting', option)
       this.updateValue(
-          this.selectedValue.filter((val) => {
-            return !this.optionComparator(val, option)
-          })
+        this.selectedValue.filter((val) => {
+          return !this.optionComparator(val, option)
+        })
       )
       this.$emit('option:deselected', option)
     },
@@ -1203,7 +1223,8 @@ export default {
         ...(this.deselectButtons || []),
         ...([this.$refs['clearButton']] || []),
       ]
-      if (ignoredButtons
+      if (
+        ignoredButtons
           .filter(Boolean)
           .some((ref) => ref.contains(event.target) || ref === event.target)
       ) {
@@ -1211,12 +1232,12 @@ export default {
         return
       }
       if (this.open && targetIsNotSearch) {
-        if (!!this.searchEl) this.searchEl.blur()
+        if (this.searchEl) this.searchEl.blur()
       } else if (this.open && !targetIsNotSearch && !this.searchable) {
         this.open = false
       } else if (!this.disabled) {
         this.open = true
-        if (!!this.searchEl) this.searchEl.focus()
+        if (this.searchEl) this.searchEl.focus()
       }
     },
 
@@ -1227,7 +1248,7 @@ export default {
      */
     isOptionSelected(option) {
       return this.selectedValue.some((value) =>
-          this.optionComparator(value, option)
+        this.optionComparator(value, option)
       )
     },
 
@@ -1267,12 +1288,12 @@ export default {
      * @returns {*}
      */
     findOptionFromReducedValue(value) {
-      const predicate = option =>
-          JSON.stringify(this.reduce(option)) === JSON.stringify(value)
+      const predicate = (option) =>
+        JSON.stringify(this.reduce(option)) === JSON.stringify(value)
 
       const matches = [...this.options, ...this.pushedTags].find(predicate)
 
-      return matches || value;
+      return matches || value
     },
 
     /**
@@ -1282,10 +1303,10 @@ export default {
      */
     maybeDeleteValue() {
       if (
-          !this.searchEl.value.length &&
-          this.selectedValue &&
-          this.selectedValue.length &&
-          this.clearable
+        !this.searchEl.value.length &&
+        this.selectedValue &&
+        this.selectedValue.length &&
+        this.clearable
       ) {
         let value = null
         if (this.multiple) {
@@ -1306,7 +1327,7 @@ export default {
      */
     optionExists(option) {
       return this.optionList.some((_option) =>
-          this.optionComparator(_option, option)
+        this.optionComparator(_option, option)
       )
     },
 
@@ -1317,7 +1338,7 @@ export default {
      * @return {*}
      */
     normalizeOptionForSlot(option) {
-      return typeof option === 'object' ? option : {[this.label]: option}
+      return typeof option === 'object' ? option : { [this.label]: option }
     },
 
     /**
@@ -1352,13 +1373,13 @@ export default {
     onSearchBlur() {
       this.open = false
       if (this.autoSelect) {
-        this.typeAheadSelect(false);
+        this.typeAheadSelect(false)
       }
       if (this.mousedown && !this.searching) {
         this.mousedown = false
       } else {
-        const {clearSearchOnSelect, multiple} = this
-        if (this.clearSearchOnBlur({clearSearchOnSelect, multiple})) {
+        const { clearSearchOnSelect, multiple } = this
+        if (this.clearSearchOnBlur({ clearSearchOnSelect, multiple })) {
           this.search = ''
         }
         this.$emit('search:blur')
@@ -1430,7 +1451,7 @@ export default {
       }
 
       this.selectOnKeyCodes.forEach(
-          (keyCode) => (defaults[keyCode] = preventAndSelect)
+        (keyCode) => (defaults[keyCode] = preventAndSelect)
       )
 
       const handlers = this.mapKeydown(defaults, this)
@@ -1445,20 +1466,20 @@ export default {
      */
     normalizeOptGroups(options) {
       return options
-          .map((item) => {
-            if (
-                item.groupLabel &&
-                item.groupOptions &&
-                item.groupOptions instanceof Array
-            ) {
-              return [{optgroup: item.groupLabel}].concat(item.groupOptions)
-            } else {
-              return [item]
-            }
-          })
-          .reduce((arr, group) => {
-            return arr.concat(group)
-          }, [])
+        .map((item) => {
+          if (
+            item.groupLabel &&
+            item.groupOptions &&
+            item.groupOptions instanceof Array
+          ) {
+            return [{ optgroup: item.groupLabel }].concat(item.groupOptions)
+          } else {
+            return [item]
+          }
+        })
+        .reduce((arr, group) => {
+          return arr.concat(group)
+        }, [])
     },
   },
 }

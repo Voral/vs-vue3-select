@@ -1,4 +1,4 @@
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 import VueSelect from '@/index'
 import App from './app.vue' // must be imported after VueSelect
 import router from './router'
