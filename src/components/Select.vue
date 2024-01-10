@@ -429,7 +429,7 @@ export default {
       type: Function,
       default(option) {
         if (typeof option === 'object') {
-          if (!option.hasOwnProperty(this.label)) {
+          if (!Object.prototype.hasOwnProperty.call(option, this.label)) {
             return console.warn(
               `[vs-vue3-select warn]: Label key "option.${this.label}" does not` +
                 ` exist in options object ${JSON.stringify(option)}.\n` +
@@ -464,7 +464,7 @@ export default {
         if (option === null || typeof option !== 'object') {
           return option
         }
-        return option.hasOwnProperty('id')
+        return Object.prototype.hasOwnProperty.call(option, 'id')
           ? option.id
           : sortAndStringify(option)
       },
@@ -739,8 +739,8 @@ export default {
 
   computed: {
     getFirstSelectable() {
-      let i = 0,
-        cnt = this.filteredOptions.length
+      let i = 0
+      const cnt = this.filteredOptions.length
       for (; i < cnt; ++i) {
         if (this.selectable(this.filteredOptions[i])) {
           return this.filteredOptions[i]
@@ -1435,9 +1435,9 @@ export default {
 
       const defaults = {
         //  backspace
-        8: (e) => this.maybeDeleteValue(),
+        8: () => this.maybeDeleteValue(),
         //  esc
-        27: (e) => this.onEscape(),
+        27: () => this.onEscape(),
         //  up.prevent
         38: (e) => {
           e.preventDefault()
