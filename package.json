@@ -4,6 +4,7 @@
   "description": "A fork of vue-select for Vue 3",
   "author": "Alexander Vorobyev <alex@va-soft.ru>",
   "homepage": "https://vue3-select.va-soft.ru/",
+  "type": "module",
   "directories": {
     "doc": "docs",
     "test": "tests"
