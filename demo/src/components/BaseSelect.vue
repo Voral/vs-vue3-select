@@ -51,7 +51,7 @@ function selectedOptionNameClass(name: string) {
         </div>
       </template>
 
-      <template #no-options="{ search, searching, loading }">
+      <template #no-options="">
         暫無選項
       </template>
     </v-select>
