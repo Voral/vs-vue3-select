@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/voral/vs-vue3-select/compare/v1.3.2...v1.3.3) (2024-01-15)
+
+
+### Refactor
+
+* Improved safety through a more secure approach for verifying object property existence ([22b25d3](https://github.com/voral/vs-vue3-select/commit/22b25d35e8b31d3fc3aca1d393b8e371fcea709e))
+* Legacy lint warnings have been processed ([846145c](https://github.com/voral/vs-vue3-select/commit/846145c6409e48fd5093f7f4dbaefc606af93f65))
+
+
+### Chores
+
+* Added type declarations for the component ([e98625c](https://github.com/voral/vs-vue3-select/commit/e98625c5565d00a4b2380ed502665d3449f63bcc)), closes [#1](https://github.com/voral/vs-vue3-select/issues/1)
+
 ### [1.3.2](https://github.com/voral/vs-vue3-select/compare/v1.3.1...v1.3.2) (2024-01-02)
 
 
