@@ -24,13 +24,16 @@
     "release": "standard-version --header",
     "release:patch": "standard-version --release-as patch",
     "release:minor": "standard-version --release-as minor",
-    "release:major": "standard-version --release-as major"
+    "release:major": "standard-version --release-as major",
+    "commit": "cz"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "main": "./dist/vs-vue3-select.umd.js",
   "module": "./dist/vs-vue3-select.es.js",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vs-vue3-select.es.js",

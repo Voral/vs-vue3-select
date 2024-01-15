@@ -38,6 +38,17 @@ Vs Vue3 Select использует слоты для более гибкой н
 - `filteredOptions {array}` - массив опций отфильтрованных поисковым запросом
 - `deselect {function}` - функция отменяющая выбор опции
 
+```ts
+export type DeselectFunction = (option: object | number) => void;
+export interface FooterSlotProps {
+    search: string;
+    loading: boolean;
+    searching: boolean;
+    filteredOptions: [];
+    deselect: DeselectFunction;
+}
+```
+
 <SlotFooter />
 
 @[code](../../../.vuepress/components/SlotFooter.vue)
@@ -55,6 +66,20 @@ Vs Vue3 Select использует слоты для более гибкой н
 - `selectedValue {array}` - Массив выбранных опций <Badge type="tip" text="v1.2.0+" vertical="top" />
 - `open {bool}` - Индикатор активности поля <Badge type="tip" text="v1.2.0+" vertical="top" />
 
+```ts
+export type DeselectFunction = (option: object | number) => void;
+export interface HeaderSlotProps {
+    search: string;
+    loading: boolean;
+    searching: boolean;
+    filteredOptions: [];
+    deselect: DeselectFunction;
+    inputId: string;
+    selectedValue: [];
+    open: boolean;
+}
+```
+
 <SlotHeader />
 
 @[code](../../../.vuepress/components/SlotHeader.vue)
@@ -68,6 +93,15 @@ Vs Vue3 Select использует слоты для более гибкой н
 - `loading {boolean}` - признак состояния загрузки
 - `searching {boolean}` - признак состояния поиска
 - `filteredOptions {array}` - массив опций отфильтрованных поисковым запросом
+
+```ts
+export interface ListFooterSlotProps {
+    search: string;
+    loading: boolean;
+    searching: boolean;
+    filteredOptions: [];
+}
+```
 
 <SlotListFooter />
 
@@ -83,6 +117,15 @@ Vs Vue3 Select использует слоты для более гибкой н
 - `searching {boolean}` - признак состояния поиска
 - `filteredOptions {array}` - массив опций отфильтрованных поисковым запросом
 
+```ts
+export interface ListHeaderSlotProps {
+    search: string;
+    loading: boolean;
+    searching: boolean;
+    filteredOptions: [];
+}
+```
+
 <SlotListHeader />
 
 @[code](../../../.vuepress/components/SlotListHeader.vue)
@@ -95,6 +138,14 @@ Vs Vue3 Select использует слоты для более гибкой н
 - `search {string}` - текущий поисковый запрос
 - `loading {boolean}` - признак состояния загрузки
 - `searching {boolean}` - признак состояния поиска
+
+```ts
+export interface NoOptionsSlotProps{
+    search: string;
+    loading: boolean;
+    searching: boolean;
+}
+```
 
 <SlotNoOptions />
 
@@ -111,7 +162,13 @@ attributes = {
     class: 'vs__open-indicator'
 }
 ```
-
+```ts
+interface OpenIndicatorSlotProps extends VNodeProps {
+    attributes: {
+        [key: string]: any;
+    };
+}
+```
 <SlotOpenIndicator />
 
 @[code](../../../.vuepress/components/SlotOpenIndicator.vue)
@@ -167,6 +224,21 @@ attributes = {
         'input': (e) => this.search = e.target.value,
     }
 ```
+```ts
+interface SearchSlotProps extends VNodeProps {
+    attributes: {
+        [key: string]: any;
+    };
+    events: {
+        compositionstart: () => void;
+        compositionend: () => void;
+        keydown: (event: KeyboardEvent) => void;
+        blur: (event: FocusEvent) => void;
+        focus: (event: FocusEvent) => void;
+        input: (event: InputEvent) => void;
+    };
+}
+```
 
 <SlotSearch />
 
@@ -192,6 +264,15 @@ attributes = {
 - `deselect {Function}` - Метод, используемый для отмены выбора данной опции, когда значение `multiple` равно true
 - `disabled {Boolean}` - Флаг заблокированного состояния компонента
 - `multiple {Boolean}` - Флаг поддержки компонентом множественного выбора
+
+```ts
+export interface SelectedOptionContainerSlotProps {
+    option: object | string;
+    deselect: DeselectFunction;
+    disabled: boolean;
+    multiple: boolean;
+}
+```
 
 <SlotSelectedOptionContainer />
 

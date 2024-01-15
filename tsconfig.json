@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "composite": true,
+    "declarationMap": true,
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": [
@@ -14,7 +16,6 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
     /* Linting */
     "strict": true,
@@ -27,13 +28,15 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "declaration": true,
   },
   "include": [
     "./vite.config.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/**/*.js",
   ]
 }

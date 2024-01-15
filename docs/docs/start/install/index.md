@@ -43,19 +43,51 @@ npm install vs-vue3-select
 ::::
 
 Then, import and register the component:
-
+:::: code-group
+::: code-group-item JS
 ```js
 import Vue from 'vue'
 import vSelect from 'vs-vue3-select'
 
 Vue.component('v-select', vSelect)
 ```
+:::
+::: code-group-item TS
+```ts
+import {Component, createApp} from 'vue'
+import App from './App.vue'
+import 'vs-vue3-select/dist/vs-vue3-select.css'
+import vSelect, { 
+    VSelectProps,
+    VSelectEvents,
+    VSelectSlots } from 'vs-vue3-select';
+
+const app =  createApp(App)
+app.component(
+    'v-select', 
+    vSelect as Component<VSelectProps, VSelectEvents, VSelectSlots>
+);
+app.mount('#app')
+```
+:::
+::::
 
 The component itself does not include any CSS. You'll need to include it
 separately:
 
 ```js
 import 'vs-vue3-select/dist/vs-vue3-select.css'
+```
+To use types in TypeScript projects, add "vs-vue3-select" to the "types" section in the tsconfig.json file:
+
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "vs-vue3-select"
+    ]
+  }
+}
 ```
 
 ## In the Browser

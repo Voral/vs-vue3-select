@@ -46,7 +46,9 @@ this.$emit('close')
 ```js
 this.$emit('option:selecting', selectedOption)
 ```
-
+```ts
+export type OptionSelectingHandler = (option: string | object) => void;
+```
 ## `option:selected`
 
 Срабатывает после выбора опции, <strong>после</strong> обновления внутреннего состояния.
@@ -54,7 +56,9 @@ this.$emit('option:selecting', selectedOption)
 ```js
 this.$emit('option:selected', selectedOption)
 ```
-
+```ts
+export type OptionSelectedHandler = (option: string | object) => void;
+```
 ## `option:deselecting`
 
 Срабатывает после отмены опции, <strong>перед</strong> обновлением внутреннего состояния.
@@ -62,7 +66,9 @@ this.$emit('option:selected', selectedOption)
 ```js
 this.$emit('option:deselecting', selectedOption)
 ```
-
+```ts
+export type OptionDeselectingHandler = (option: string | object) => void;
+```
 ## `option:deselected`
 
 Срабатывает после отмены опции, <strong>после</strong> обновления внутреннего состояния.
@@ -70,7 +76,9 @@ this.$emit('option:deselecting', selectedOption)
 ```js
 this.$emit('option:deselected', deselectedOption)
 ```
-
+```ts
+export type OptionDeselectedHandler = (option: string | object) => void;
+```
 ## `option:created`
 
 Срабатывает, когда `taggable` имеет значение `true` и была создана новая опция.
@@ -81,7 +89,9 @@ this.$emit('option:deselected', deselectedOption)
  */
 this.$emit('option:created', newOption)
 ```
-
+```ts
+export type OptionCreatedHandler = (option: string | object) => void;
+```
 ## `search`
 
 Срабатывает всякий раз, когда строка поиска изменяется, генерируйте событие 'search'. Событие передается с двумя параметрами:
@@ -107,6 +117,11 @@ this.$emit('search', this.search, this.toggleLoading)
     }
   "
 />
+```
+
+```ts
+export type ToggleLoadingFunction = (toggle: boolean | null) => boolean;
+export type SearchHandler = (search: string, toggleFunction: ToggleLoadingFunction) => void;
 ```
 
 ## `search:blur`

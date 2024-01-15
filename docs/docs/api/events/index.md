@@ -46,7 +46,9 @@ internal state.
 ```js
 this.$emit('option:selecting', selectedOption)
 ```
-
+```ts
+export type OptionSelectingHandler = (option: string | object) => void;
+```
 ## `option:selected`
 
 Triggered when an option has been selected, <strong>after</strong> updating
@@ -55,7 +57,9 @@ internal state.
 ```js
 this.$emit('option:selected', selectedOption)
 ```
-
+```ts
+export type OptionSelectedHandler = (option: string | object) => void;
+```
 ## `option:deselecting`
 
 Triggered when an option has been deselected, <strong>before</strong> updating
@@ -64,7 +68,9 @@ internal state.
 ```js
 this.$emit('option:deselecting', selectedOption)
 ```
-
+```ts
+export type OptionDeselectingHandler = (option: string | object) => void;
+```
 ## `option:deselected`
 
 Triggered when an option has been deselected, <strong>after</strong> updating
@@ -73,7 +79,9 @@ internal state.
 ```js
 this.$emit('option:deselected', deselectedOption)
 ```
-
+```ts
+export type OptionDeselectedHandler = (option: string | object) => void;
+```
 ## `option:created`
 
 Triggered when `taggable` is `true` and a new option has been created.
@@ -84,7 +92,9 @@ Triggered when `taggable` is `true` and a new option has been created.
  */
 this.$emit('option:created', newOption)
 ```
-
+```ts
+export type OptionCreatedHandler = (option: string | object) => void;
+```
 ## `search`
 
 Anytime the search string changes, emit the 'search' event. The event is passed
@@ -114,6 +124,10 @@ this.$emit('search', this.search, this.toggleLoading)
 />
 ```
 
+```ts
+export type ToggleLoadingFunction = (toggle: boolean | null) => boolean;
+export type SearchHandler = (search: string, toggleFunction: ToggleLoadingFunction) => void;
+```
 ## `search:blur`
 
 Triggered when the text input loses focus. The dropdown will close immediately
@@ -131,8 +145,3 @@ before this event is triggered.
 ```js
 this.$emit('search:focus')
 ```
-
-## `search`
-
-Triggered when the search text changes.
-

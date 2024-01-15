@@ -111,6 +111,14 @@ calculatePosition: {
     }
 }
 ```
+```ts
+export type CalculatePositionGeometry = {
+    width: string,
+    top: string,
+    left: string
+}
+export type CalculatePositionFunction = (dropdownList: HTMLUListElement, component: Component<any>, geometry: CalculatePositionGeometry) => Function | void;
+```
 
 ## clearable
 
@@ -134,6 +142,10 @@ clearSearchOnBlur: {
       return clearSearchOnSelect;
     }
 },
+```
+```ts
+export type ClearSearchOnBlurFunctionProperty = { clearSearchOnSelect: boolean, multiple: boolean };
+export type ClearSearchOnBlurFunction = (props: ClearSearchOnBlurFunctionProperty) => boolean
 ```
 
 ## clearSearchOnSelect
@@ -212,6 +224,9 @@ createOption: {
   }
 },
 ```
+```ts
+export type CreateOptionFunction = (option: string | number) => Object | string | number;
+```
 
 ## deselectFromDropdown
 
@@ -281,6 +296,9 @@ filter: {
 	}
 },
 ```
+```ts
+export type FilterFunction = (options: [], search: String, component: Component) => boolean;
+```
 
 ## filterable
 
@@ -306,6 +324,9 @@ filterBy: {
     return (label || '').toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) > -1
   }
 },
+```
+```ts
+export type FilterByFunction = (option: object | string, label: string, search: string, component: Component) => boolean;
 ```
 
 ## getOptionKey
@@ -337,6 +358,9 @@ getOptionKey: {
   }
 },
 ```
+```ts
+export type GetOptionKeyFunction = (option: object | string) => string;
+```
 
 ## getOptionLabel
 
@@ -363,6 +387,9 @@ getOptionLabel: {
     return option;
   }
 },
+```
+```ts
+export type GetOptionLabelFunction = (option: object | string) => string;
 ```
 
 ## inputId
@@ -538,6 +565,9 @@ reduce: {
   default: option => option,
 },
 ```
+```ts
+export type ReduceFunction = (option: object | string) => object | string;
+```
 
 ## resetOnOptionsChange
 
@@ -559,6 +589,9 @@ resetOnOptionsChange: {
     default: false,
     validator: (value) => ['function', 'boolean'].includes(typeof value)
 },
+```
+```ts
+export type ResetOnOptionsChangeFunction = (newOption: object | string, oldOption: object | string, selectedValue: object | string) => boolean;
 ```
 
 ## searchable
@@ -588,6 +621,9 @@ selectable: {
    */
   default: option => true,
 },
+```
+```ts
+export type SelectableFunction = (option: object | string) => boolean;
 ```
 
 ## tabindex
