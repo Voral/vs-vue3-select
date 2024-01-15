@@ -10,11 +10,11 @@ head:
   - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,dropdown,styling"} ]
 sidebarDepth: 0
 prev:
- text: Работа со значением
- link: /ru/start/values
+ text: TypeScript и типы
+ link: /ru/start/ts/
 next:
  text: Стилизация CSS
- link: /ru/styling/css
+ link: /ru/styling/css/
 ---
 
 # Дочерние компоненты

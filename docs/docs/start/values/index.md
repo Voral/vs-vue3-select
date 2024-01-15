@@ -11,10 +11,10 @@ head:
 sidebarDepth: 0
 prev:
  text: Dropdown Options
- link: /start/options
+ link: /start/options/
 next:
- text: Child Components
- link: /styling/components
+ text: TypeScript and Types
+ link: /start/ts/
 ---
 
 # Selecting Values

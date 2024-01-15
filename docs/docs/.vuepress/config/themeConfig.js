@@ -13,6 +13,7 @@ export default defaultTheme({
                     {link: '/start/install/', text: 'Installation'},
                     {link: '/start/options/', text: 'Dropdown Options'},
                     {link: '/start/values/', text: 'Selecting Values'},
+                    {link: '/start/ts/', text: 'TypeScript and Types'},
                 ],
             },
             {
@@ -75,6 +76,7 @@ export default defaultTheme({
                     {link: '/ru/start/install/', text: 'Установка'},
                     {link: '/ru/start/options/', text: 'Выпадающий список'},
                     {link: '/ru/start/values/', text: 'Работа со значением'},
+                    {link: '/ru/start/ts/', text: 'TypeScript и типы'},
                 ],
             },
             {

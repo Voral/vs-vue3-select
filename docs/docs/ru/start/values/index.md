@@ -11,10 +11,10 @@ head:
 sidebarDepth: 0
 prev:
   text: Выпадающий список
-  link: /ru/start/options
+  link: /ru/start/options/
 next:
-  text: Дочерние компоненты
-  link: /ru/styling/components
+  text: TypeScript и типы
+  link: /ru/start/ts/
 ---
 
 # Работа со значением

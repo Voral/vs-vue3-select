@@ -11,11 +11,11 @@ head:
   
 sidebarDepth: 0
 prev:
- text: Selecting Values
- link: /start/values
+ text: TypeScript and Types
+ link: /start/ts/
 next:
  text: CSS Styling
- link: /styling/css
+ link: /styling/css/
 ---
 
 # Child Components
