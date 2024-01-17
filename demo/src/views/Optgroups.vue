@@ -1,44 +1,42 @@
 <template>
-  <div>
-    <div class="section">
-      <h2 class="title">optgroups</h2>
-      <ul>
-        <li>clearable: false</li>
-      </ul>
-      <v-select
-        v-model="selected"
-        :options="optgroups"
-        :clearable="false"
-        :searchable="false"
-      />
-    </div>
+  <section>
+    <h2>optgroups</h2>
+    <ul>
+      <li>clearable: false</li>
+    </ul>
+    <v-select
+      v-model="selected"
+      :options="optgroups"
+      :clearable="false"
+      :searchable="false"
+    />
+  </section>
 
-    <div class="section">
-      <h2 class="title">optgroups (searchable)</h2>
-      <ul>
-        <li>clearable: false</li>
-      </ul>
-      <v-select
-        v-model="selected"
-        :options="optgroups"
-        :clearable="false"
-        searchable
-      />
-    </div>
+  <section>
+    <h2>optgroups (searchable)</h2>
+    <ul>
+      <li>clearable: false</li>
+    </ul>
+    <v-select
+      v-model="selected"
+      :options="optgroups"
+      :clearable="false"
+      searchable
+    />
+  </section>
 
-    <div class="section">
-      <h2 class="title">optgroups mix</h2>
-      <ul>
-        <li>clearable: false</li>
-      </ul>
-      <v-select
-        v-model="selected"
-        :options="optgroupsMix"
-        :clearable="false"
-        :searchable="false"
-      />
-    </div>
-  </div>
+  <section>
+    <h2>optgroups mix</h2>
+    <ul>
+      <li>clearable: false</li>
+    </ul>
+    <v-select
+      v-model="selected"
+      :options="optgroupsMix"
+      :clearable="false"
+      :searchable="false"
+    />
+  </section>
 </template>
 
 <script setup lang="ts">

@@ -1,0 +1,35 @@
+:root{
+    --demo-props-color: #000080;
+    --demo-note-color: #808080;
+}
+.dark {
+    --demo-background: #2B2B2B;
+    --demo-props-color: #FFC66D;
+    --demo-note-color: #629755;
+
+    --vs-colors--lightest: #4D4D4D;
+    --vs-colors--dark: #fff;
+    --vs-border-color: var(--vs-colors--lightest);
+    --vs-open-indicator-color: var(--vs-colors--lightest);
+    --vs-selected-color: var(--vs-colors--dark);
+    --vs-dropdown-bg: var(--demo-background);
+    --vs-dropdown-option--active-bg: #374752;
+    --vs-dropdown-option--selected-bg: #384C38;
+    --vs-state-disabled-bg: #323232;
+    --vs-state-disabled-color: #aeaeae;
+    --vs-disabled-bg: #323232;
+    --vs-disabled-color: #beaeae;
+    --vs-dropdown-optgroup-option-bg: #4F4B41;
+
+}
+
+.rounded {
+    --vs-border-radius: calc(var(--vs-height) / 2);
+}
+
+.lined {
+    --vs-border-radius: 0;
+}
+.lined .vs__dropdown-toggle{
+    border-width: 0 0 1px 0;
+}

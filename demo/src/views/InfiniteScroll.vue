@@ -7,13 +7,13 @@ const limit = ref(10)
 const search = ref('')
 
 const filtered = computed(() =>
-  countries.filter((country) => country.includes(search.value))
+  countries.filter((country) => country.includes(search.value)),
 )
 
 const paginated = computed(() => filtered.value.slice(0, limit.value))
 
 const hasNextPage = computed(
-  () => paginated.value.length < filtered.value.length
+  () => paginated.value.length < filtered.value.length,
 )
 
 onMounted(() => {
@@ -51,25 +51,23 @@ const load = ref()
 </script>
 
 <template>
-  <div>
-    <div class="section">
-      <h2 class="title">Infinite Scroll</h2>
+  <section>
+    <h2>Infinite Scroll</h2>
 
-      <v-select
-        :options="paginated"
-        :filterable="false"
-        @open="onOpen"
-        @close="onClose"
-        @search="(query: any) => (search = query)"
-      >
-        <template #list-footer>
-          <li v-show="hasNextPage" ref="load" class="loader">
-            Loading more options...
-          </li>
-        </template>
-      </v-select>
-    </div>
-  </div>
+    <v-select
+      :options="paginated"
+      :filterable="false"
+      @open="onOpen"
+      @close="onClose"
+      @search="(query: any) => (search = query)"
+    >
+      <template #list-footer>
+        <li v-show="hasNextPage" ref="load" class="loader">
+          Loading more options...
+        </li>
+      </template>
+    </v-select>
+  </section>
 </template>
 
 <style scoped>

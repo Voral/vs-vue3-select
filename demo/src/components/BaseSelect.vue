@@ -19,17 +19,20 @@ const props = withDefaults(
 )
 
 const borderRadius = computed(() => {
-  return props.square ? '8px' : '30px'
+  return props.square ? '0' : '30px'
 })
 
 const attrs = useAttrs()
+type optionType = {
+  name: string
+}
 
 /**
- * @feat 將選擇的選項名稱加上粗體
+ * @feat Bold the name of the selected option
  */
 function selectedOptionNameClass(name: string) {
-  if (name === (attrs.modelValue as object)?.name) {
-    return 'font-semibold'
+  if (name === (attrs.modelValue as optionType)?.name) {
+    return 'font-bold'
   }
   return ''
 }
@@ -51,23 +54,21 @@ function selectedOptionNameClass(name: string) {
         </div>
       </template>
 
-      <template #no-options=""> 暫無選項 </template>
+      <template #no-options="">No options yet ...</template>
     </v-select>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 :deep(.vs__dropdown-toggle) {
-  border-radius: v-bind(borderRadius); // 欄位外匡
-  box-shadow: var(--input-shadow); // 欄位陰影
+  border-radius: v-bind(borderRadius);
+  box-shadow: var(--input-shadow);
 }
 
-// vs__selected-options 調整左側間隔
 :deep(.vs__dropdown-toggle .vs__selected-options) {
   padding-left: 15px;
 }
 
-// vs__selected 欄位文字過長橫軸滑動
 :deep(.vs__dropdown-toggle .vs__selected-options .vs__selected) {
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
@@ -80,16 +81,18 @@ function selectedOptionNameClass(name: string) {
   display: none;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
 .option--scroll {
   white-space: nowrap;
   overflow-x: auto;
 
-  /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 .option--scroll::-webkit-scrollbar {
   display: none;
 }

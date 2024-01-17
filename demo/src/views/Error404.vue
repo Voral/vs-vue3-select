@@ -1,17 +1,55 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+
 const router = useRouter()
 </script>
 
 <template>
-  <div class="text-center">
-    <div class="text-primary-600 text-9xl font-bold my-5">404</div>
-    <div class="text-2xl text-gray-500 my-5">Oops. Page not found...</div>
-    <div class="flex flex-row justify-center space-x-4">
-      <button @click="router.go(-1)" class="btn btn-primary my-5">Back</button>
-      <button @click="router.push('/')" class="btn btn-secondary my-5">
-        Home
-      </button>
+  <section>
+    <div class="head">404</div>
+    <div class="message">Oops. Page not found...</div>
+    <div class="buttons">
+      <button @click="router.go(-1)">Back</button>
+      <button @click="router.push('/')">Home</button>
     </div>
-  </div>
+  </section>
 </template>
+
+<style scoped>
+section {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-top: 36px;
+}
+
+.head {
+  font-size: 22vw;
+}
+
+.message {
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+button {
+  background: var(--demo-note-color);
+  height: var(--vs-height);
+  border: none;
+  border-radius: var(--vs-border-radius);
+  padding: 0 24px;
+  cursor: pointer;
+  color: var(--vs-colors--dark);
+}
+button:hover {
+  background: var(--vs-dropdown-option--selected-bg);
+}
+</style>
