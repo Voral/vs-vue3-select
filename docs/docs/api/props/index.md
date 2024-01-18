@@ -424,6 +424,19 @@ loading: {
 	default: false
 },
 ```
+## mapKeydown
+
+Used to modify the default keydown events map for the search input. Can be used to implement custom behaviour for key presses.
+
+```js
+    mapKeydown: {
+      type: Function,
+      default: (map) => map,
+    },
+```
+```ts
+export type MapKeydownFunction = (map: object, component?: Component) => object
+```
 
 ## multiple
 

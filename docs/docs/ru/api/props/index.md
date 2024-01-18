@@ -136,7 +136,7 @@ clearSearchOnBlur: {
 },
 ```
 ```ts
-export type ClearSearchOnBlurFunctionProperty = { clearSearchOnSelect: boolean, multiple: boolean };
+export type ClearSearchOnBlurFunctionProperty = { clearSearchOnSelect?: boolean, multiple?: boolean };
 export type ClearSearchOnBlurFunction = (props: ClearSearchOnBlurFunctionProperty) => boolean
 ```
 ## clearSearchOnSelect
@@ -417,6 +417,21 @@ loading: {
 },
 ```
 
+## mapKeydown
+
+Позволяет переопределять реакцию компонента на события нажатия клавиш, в то время как строка поиска имеет фокус
+
+```js
+
+    mapKeydown: {
+      type: Function,
+      default: (map) => map,
+    },
+```
+```ts
+export type MapKeydownFunction = (map: object, component?: Component) => object
+```
+
 ## multiple
 
 Эквивалентно атрибуту `multiple` тега `<select>`.
@@ -610,7 +625,7 @@ selectable: {
 },
 ```
 ```ts
-export type SelectableFunction = (option: object | string) => boolean;
+export type SelectableFunction = (option?: object | string) => boolean;
 ```
 
 ## tabindex
