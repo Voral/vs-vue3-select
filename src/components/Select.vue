@@ -402,14 +402,15 @@ export default {
     /**
      * Decides whether an option is selectable or not. Not selectable options
      * are displayed but disabled and cannot be selected.
+     * type SelectableFunction = (option: object | string) => boolean;
      *
-     * @type {Function}
+     * @type {SelectableFunction}
      * @param {Object|String} option
      * @return {Boolean}
      */
     selectable: {
       type: Function,
-      default: (option) => true,
+      default: () => true,
     },
 
     /**
@@ -433,7 +434,7 @@ export default {
             return console.warn(
               `[vs-vue3-select warn]: Label key "option.${this.label}" does not` +
                 ` exist in options object ${JSON.stringify(option)}.\n` +
-                'https://vue3-select.va-soft.ru/api/props/#getoptionlabel'
+                'https://vue3-select.va-soft.ru/api/props/#getoptionlabel',
             )
           }
           return option[this.label]
@@ -584,11 +585,14 @@ export default {
 
     /**
      * If search text should clear on blur
+     * type ClearSearchOnBlurFunctionProperty = { clearSearchOnSelect?: boolean, multiple?: boolean };
+     * type ClearSearchOnBlurFunction = (props: ClearSearchOnBlurFunctionProperty) => boolean
+     * @type {ClearSearchOnBlurFunction}
      * @return {Boolean} True when single and clearSearchOnSelect
      */
     clearSearchOnBlur: {
       type: Function,
-      default: function ({ clearSearchOnSelect, multiple }) {
+      default: function ({ clearSearchOnSelect }) {
         return clearSearchOnSelect
       },
     },
@@ -650,16 +654,13 @@ export default {
      * Used to modify the default keydown events map
      * for the search input. Can be used to implement
      * custom behaviour for key presses.
+     * MapKeydownFunction = (map: object, component?: Component) => object
+     * @type {MapKeydownFunction}
      */
 
     mapKeydown: {
       type: Function,
-      /**
-       * @param map {Object}
-       * @param vm {VueSelect}
-       * @return {Object}
-       */
-      default: (map, vm) => map,
+      default: (map) => map,
     },
 
     /**
@@ -763,7 +764,7 @@ export default {
       }
       const label = this.getOptionLabel(option).replace(
         new RegExp(this.search, 'i'),
-        this.search
+        this.search,
       )
       return label.startsWith(this.search) ? label : ''
     },
@@ -816,7 +817,7 @@ export default {
     searchEl() {
       return this.$slots['search']
         ? this.$refs.selectedOptions.querySelector(
-            this.searchInputQuerySelector
+            this.searchInputQuerySelector,
           )
         : this.$refs.search
     },
@@ -968,7 +969,7 @@ export default {
      */
     filteredOptions() {
       const optionList = this.normalizeOptGroups(
-        Array.prototype.concat(this.optionList)
+        Array.prototype.concat(this.optionList),
       )
 
       if (!this.filterable && !this.taggable) {
@@ -1020,7 +1021,7 @@ export default {
           ? this.resetOnOptionsChange(
               newOptions,
               oldOptions,
-              this.selectedValue
+              this.selectedValue,
             )
           : this.resetOnOptionsChange
 
@@ -1069,7 +1070,7 @@ export default {
         return
       }
       const paste = (event.clipboardData || window.clipboardData).getData(
-        'text'
+        'text',
       )
       const tags = paste.split(this.pasteSeparator)
       this.pasteProcessed = true
@@ -1099,7 +1100,7 @@ export default {
     setInternalValueFromOptions(value) {
       if (Array.isArray(value)) {
         this.$data._value = value.map((val) =>
-          this.findOptionFromReducedValue(val)
+          this.findOptionFromReducedValue(val),
         )
       } else {
         this.$data._value = this.findOptionFromReducedValue(value)
@@ -1114,7 +1115,7 @@ export default {
      */
     select(option) {
       this.processSelect(option)
-      this.onAfterSelect(option)
+      this.onAfterSelect()
     },
 
     processSelect(option) {
@@ -1155,7 +1156,7 @@ export default {
       this.updateValue(
         this.selectedValue.filter((val) => {
           return !this.optionComparator(val, option)
-        })
+        }),
       )
       this.$emit('option:deselected', option)
     },
@@ -1170,10 +1171,9 @@ export default {
 
     /**
      * Called from this.select after each selection.
-     * @param  {Object|String} option
      * @return {void}
      */
-    onAfterSelect(option) {
+    onAfterSelect() {
       if (this.closeOnSelect) {
         this.open = !this.open
         this.searchEl.blur()
@@ -1248,7 +1248,7 @@ export default {
      */
     isOptionSelected(option) {
       return this.selectedValue.some((value) =>
-        this.optionComparator(value, option)
+        this.optionComparator(value, option),
       )
     },
 
@@ -1327,7 +1327,7 @@ export default {
      */
     optionExists(option) {
       return this.optionList.some((_option) =>
-        this.optionComparator(_option, option)
+        this.optionComparator(_option, option),
       )
     },
 
@@ -1451,7 +1451,7 @@ export default {
       }
 
       this.selectOnKeyCodes.forEach(
-        (keyCode) => (defaults[keyCode] = preventAndSelect)
+        (keyCode) => (defaults[keyCode] = preventAndSelect),
       )
 
       const handlers = this.mapKeydown(defaults, this)

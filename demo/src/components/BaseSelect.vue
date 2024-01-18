@@ -15,7 +15,7 @@ const props = withDefaults(
   {
     searchable: false,
     square: false,
-  }
+  },
 )
 
 const borderRadius = computed(() => {
@@ -28,7 +28,7 @@ const attrs = useAttrs()
  * @feat 將選擇的選項名稱加上粗體
  */
 function selectedOptionNameClass(name: string) {
-  if (name === (attrs.modelValue as any)?.name) {
+  if (name === (attrs.modelValue as object)?.name) {
     return 'font-semibold'
   }
   return ''
@@ -51,9 +51,7 @@ function selectedOptionNameClass(name: string) {
         </div>
       </template>
 
-      <template #no-options="">
-        暫無選項
-      </template>
+      <template #no-options=""> 暫無選項 </template>
     </v-select>
   </div>
 </template>
