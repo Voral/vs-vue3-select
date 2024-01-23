@@ -3,7 +3,12 @@
 </style>
 
 <template>
-  <div :dir="dir" class="v-select" :class="stateClasses">
+  <div
+    :dir="dir"
+    class="v-select"
+    :class="stateClasses"
+    v-click-outside="clickOutside"
+  >
     <slot name="header" v-bind="scope.header" />
     <div
       :id="`vs${uid}__combobox`"
@@ -13,7 +18,6 @@
       :aria-expanded="dropdownOpen.toString()"
       :aria-owns="`vs${uid}__listbox`"
       :aria-label="ariaLabel"
-      v-click-outside="clickOutside"
       @mousedown="toggleDropdown($event)"
     >
       <div ref="selectedOptions" class="vs__selected-options">

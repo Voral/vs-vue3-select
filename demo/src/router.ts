@@ -5,6 +5,7 @@ import Test from './views/Test.vue'
 import BaseSelect from './views/BaseSelect.vue'
 import Optgroups from './views/Optgroups.vue'
 import InfiniteScroll from './views/InfiniteScroll.vue'
+import Paginated from './views/Paginated.vue'
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: '/infinite-scroll',
     name: 'InfiniteScroll',
     component: InfiniteScroll,
+  },
+  {
+    path: '/paginated',
+    name: 'Paginated',
+    component: Paginated,
   },
   // Fallback route for handling 404s
   {
