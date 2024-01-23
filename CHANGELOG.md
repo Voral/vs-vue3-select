@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://github.com/voral/vs-vue3-select/compare/v1.3.3...v1.3.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* the option:selected event was not always emitted ([337ddce](https://github.com/voral/vs-vue3-select/commit/337ddce29313d49905d169c8beac1c6e98794052))
+
+
+### Chores
+
+* Added type for mapKeydown  property ([e4cda88](https://github.com/voral/vs-vue3-select/commit/e4cda88ad7bb610d87547f7b4a04ab33a889f3ce))
+
 ### [1.3.3](https://github.com/voral/vs-vue3-select/compare/v1.3.2...v1.3.3) (2024-01-15)
 
 
