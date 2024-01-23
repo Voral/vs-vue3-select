@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.5](https://github.com/voral/vs-vue3-select/compare/v1.3.4...v1.3.5) (2024-01-23)
+
+
+### Bug Fixes
+
+* Click on the list-footer and list-header slots now does not close the list ([1a36c0a](https://github.com/voral/vs-vue3-select/commit/1a36c0ae209774b4f5cfbe19dfe381c14f0c714c))
+
 ### [1.3.4](https://github.com/voral/vs-vue3-select/compare/v1.3.3...v1.3.4) (2024-01-23)
 
 
