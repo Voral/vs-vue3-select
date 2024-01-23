@@ -1136,8 +1136,8 @@ export default {
             return !this.optionComparator(val, option)
           })
           this.pasteBuffer.push(option)
-          this.$emit('option:selected', option)
         }
+        this.$emit('option:selected', option)
       } else if (
         this.deselectFromDropdown &&
         (this.clearable || (this.multiple && this.selectedValue.length > 1))
