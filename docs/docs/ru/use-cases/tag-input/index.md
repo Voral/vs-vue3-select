@@ -13,11 +13,10 @@ keyword: select,tagged,tag input,input for tags
 sidebarDepth: 0
 prev:
   text: Плавающая метка
-  link: /ru/use-cases/floating-label
+  link: /ru/use-cases/floating-label/
 next:
-  text: События клавиатуры
-  link: /ru/customizing/keydown
-
+  text: Навигация
+  link: /ru/use-cases/routing/
 ---
 
 # Поле ввода тегов

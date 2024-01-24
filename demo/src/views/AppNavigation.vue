@@ -1,13 +1,16 @@
-<script setup lang="ts">
+<script setup>
 import VSelect from '@/components/Select.vue'
 import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const current = ref(router.currentRoute.value)
+const current = ref(
+  router.options.routes.find(
+    (item) => item.path === router.currentRoute.value.path,
+  ),
+)
 
 const links = computed(() => {
-  const router = useRouter()
   const excludes = ['404']
   return router.options.routes.filter(
     (r) =>

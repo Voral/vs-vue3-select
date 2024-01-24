@@ -10,11 +10,11 @@ head:
   - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,keydown"} ]
 sidebarDepth: 0
 prev:
-  text: Tag Input Field
-  link: /use-cases/tag-input
+  text: Routing
+  link: /use-cases/routing/
 next:
   text: Dropdown Position
-  link: /customizing/positioning
+  link: /customizing/positioning/
 ---
 
 # Keydown Events

@@ -10,11 +10,11 @@ head:
   - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,keydown"} ]
 sidebarDepth: 0
 prev:
-  text: Поле ввода тегов
-  link: /ru/use-cases/tag-input
+  text: Навигация
+  link: /ru/use-cases/routing/
 next:
   text: Позиционирование списка
-  link: /ru/customizing/positioning
+  link: /ru/customizing/positioning/
 ---
 
 # События клавиатуры
