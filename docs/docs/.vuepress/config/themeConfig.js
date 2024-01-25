@@ -47,6 +47,7 @@ export default defaultTheme({
           { link: '/use-cases/floating-label/', text: 'Floating Label' },
           { link: '/use-cases/tag-input/', text: 'Tag input' },
           { link: '/use-cases/routing/', text: 'Routing' },
+          { link: '/use-cases/themes/', text: 'Theme Switcher' },
         ],
       },
       {
@@ -117,6 +118,7 @@ export default defaultTheme({
           { link: '/ru/use-cases/floating-label/', text: 'Плавающая метка' },
           { link: '/ru/use-cases/tag-input/', text: 'Ввод тегов' },
           { link: '/ru/use-cases/routing/', text: 'Навигация' },
+          { link: '/ru/use-cases/themes/', text: 'Переключатель тем' },
         ],
       },
       {

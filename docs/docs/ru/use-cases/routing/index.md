@@ -15,8 +15,8 @@ prev:
   text: Поле ввода тегов
   link: /ru/use-cases/tag-input/
 next:
-  text: События клавиатуры
-  link: /ru/customizing/keydown/
+  text: Переключатель тем
+  link: /ru/use-cases/themes/
 ---
 # Навигация
 

@@ -10,8 +10,8 @@ head:
   - [ meta, { name: keywords , content: "select,select input,multiselect,vue,vue3,vue3 component,vue3 select,keydown"} ]
 sidebarDepth: 0
 prev:
-  text: Навигация
-  link: /ru/use-cases/routing/
+  text: Переключатель тем
+  link: /ru/use-cases/themes/
 next:
   text: Позиционирование списка
   link: /ru/customizing/positioning/

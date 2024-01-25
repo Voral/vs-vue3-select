@@ -15,8 +15,8 @@ prev:
   text: Tag Input Field
   link: /use-cases/tag-input/
 next:
-  text: Keydown Events
-  link: /customizing/keydown/
+  text: Theme Switcher
+  link: /use-cases/themes/
 ---
 # Routing
 
