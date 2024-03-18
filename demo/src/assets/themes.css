@@ -14,7 +14,7 @@
     --vs-selected-color: var(--vs-colors--dark);
     --vs-dropdown-bg: var(--demo-background);
     --vs-dropdown-option--active-bg: #374752;
-    --vs-dropdown-option--selected-bg: #384C38;
+    --vs-selected-bg: rgba(56, 76, 56, 0.6);
     --vs-state-disabled-bg: #323232;
     --vs-state-disabled-color: #aeaeae;
     --vs-disabled-bg: #323232;
