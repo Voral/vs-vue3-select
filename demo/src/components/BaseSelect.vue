@@ -62,7 +62,6 @@ function selectedOptionNameClass(name: string) {
 <style scoped>
 :deep(.vs__dropdown-toggle) {
   border-radius: v-bind(borderRadius);
-  box-shadow: var(--input-shadow);
 }
 
 :deep(.vs__dropdown-toggle .vs__selected-options) {
@@ -79,10 +78,6 @@ function selectedOptionNameClass(name: string) {
     .vs__dropdown-toggle .vs__selected-options .vs__selected::-webkit-scrollbar
   ) {
   display: none;
-}
-
-.font-bold {
-  font-weight: bold;
 }
 
 .option--scroll {
