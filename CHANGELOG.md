@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.6](https://github.com/voral/vs-vue3-select/compare/v1.3.5...v1.3.6) (2024-11-22)
+
+
+### Bug Fixes
+
+* In multiple mode, with a long value, the delete button became invisible. ([f215d88](https://github.com/voral/vs-vue3-select/commit/f215d88e8bbd2fcf9630581d2dcfa0e6ee508e4e))
+
+
+### Style Updates
+
+* Small style fix in demo ([542d765](https://github.com/voral/vs-vue3-select/commit/542d7653aab32fa32f09cff684448f5748a89be1))
+
 ### [1.3.5](https://github.com/voral/vs-vue3-select/compare/v1.3.4...v1.3.5) (2024-01-23)
 
 
