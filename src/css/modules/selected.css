@@ -8,6 +8,7 @@
     z-index: 0;
     white-space: nowrap;
     overflow: hidden;
+    position: relative;
 
     background-color: var(--vs-selected-bg);
     border: var(--vs-selected-border-width) var(--vs-selected-border-style) var(--vs-selected-border-color);
@@ -16,15 +17,21 @@
     line-height: var(--vs-line-height);
     padding: var(--vs-selected-multiple-padding);
 }
-
+.vs__selected:has(.vs__deselect) {
+    padding-right: 28px;
+}
 .vs__deselect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--vs-selected-bg);
     display: inline-flex;
+    align-items: center;
     appearance: none;
-    margin-left: 4px;
-    padding: 0;
+    padding: 0 4px;
     border: 0;
     cursor: pointer;
-    background: none;
     fill: var(--vs-controls-color);
     text-shadow: var(--vs-controls--deselect-text-shadow);
 }
