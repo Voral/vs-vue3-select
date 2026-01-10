@@ -36,7 +36,10 @@
   "types": "./index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vs-vue3-select.es.js",
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./dist/vs-vue3-select.es.js"
+      },
       "require": "./dist/vs-vue3-select.umd.js"
     },
     "./dist/vs-vue3-select.css": {
