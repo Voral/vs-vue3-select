@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.7](https://github.com/voral/vs-vue3-select/compare/v1.3.6...v1.3.7) (2026-02-03)
+
+
+### Chores
+
+* **deps:** update devDependencies ([0231d1b](https://github.com/voral/vs-vue3-select/commit/0231d1b723c6de791a336f235bffe3fde3df0874))
+* **deps:** update development dependencies ([33923a3](https://github.com/voral/vs-vue3-select/commit/33923a3c3e2e7cbbe02d4ea16ed4c67c2b2c1ad4))
+
 ### [1.3.6](https://github.com/voral/vs-vue3-select/compare/v1.3.5...v1.3.6) (2024-11-22)
 
 
